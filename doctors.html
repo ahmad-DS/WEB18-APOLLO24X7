@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Doctor Consultation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      #container {
+        font-family: "Poppins", sans-serif;
+        border: 1px solid red;
+        height: auto;
+        width: 80%;
+        margin: 0 10% 0 10%;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .box2 {
+        border: 1px solid green;
+        width: 60%;
+      }
+
+      .box1 {
+        height: auto;
+        width: auto;
+        padding-left: 2%;
+        margin-top: 5%;
+        font-size: 15px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        background-color: whitesmoke;
+        padding-bottom: 10px;
+      }
+
+      i {
+        color: teal;
+      }
+
+      input {
+        border: none;
+      }
+
+      .box1 > h1 {
+        font-size: 15px;
+        color: teal;
+      }
+
+      input + hr + h6 {
+        font-size: 12px;
+      }
+
+      button {
+        color: teal;
+        background-color: white;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+      }
+
+      input + hr {
+        height: 1px;
+        background-color: teal;
+        border: none;
+        margin-right: 2%;
+      }
+
+      .button {
+        margin: -15px 0px 0px;
+      }
+
+      h3 {
+        font-size: 15px;
+        color: teal;
+        width: auto;
+      }
+
+      h3 + img {
+        width: 100%;
+        height: 150px;
+      }
+
+      img + h3 {
+        color: black;
+      }
+
+      .specialities {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, auto);
+        gap: 20px;
+        margin: auto;
+        width: 98%;
+        padding-top: 15px;
+        padding-bottom: 20px;
+      }
+
+      .specialities > div {
+        justify-content: center;
+      }
+
+      .box > h6 {
+        text-align: center;
+      }
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h6 + img {
+        height: 35px;
+        width: 35px;
+      }
+
+      img + p {
+        font-size: 10px;
+        color: rgb(109, 208, 208);
+        text-align: center;
+      }
+
+      p + p {
+        font-size: 10px;
+        color: rgb(3, 68, 68);
+        text-align: center;
+      }
+
+      .specialities > .box {
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        border-radius: 10px;
+      }
+
+      #container > .box3 {
+        height: auto;
+        width: 35%;
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      .box3 > h3 {
+        color: #01667c;
+      }
+
+      .box3 > ul {
+        color: #02475b;
+        padding-bottom: 50px;
+      }
+
+      ul + h1 {
+        font-size: 15px;
+        color: #01667c;
+      }
+
+      .btn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        height: auto;
+        width: 50%;
+        /* border: 1px solid rebeccapurple; */
+        padding: 0 50px 0 50px;
+      }
+
+      .btn > button {
+        height: 50px;
+        width: 150px;
+        border: 1px solid red;
+        justify-content: center;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="box2">
+        <div class="box1">
+          <h1>Online Doctor Consultation</h1>
+          <i class="fa fa-search fa-1x"></i>
+          <input type="search" placeholder="Search doctors or specialists" />
+          <hr />
+          <h6>Popular Cities</h6>
+          <div class="button">
+            <button>New Delhi</button>
+            <button>Hyderabad</button>
+            <button>Chennai</button>
+            <button>Kolkata</button>
+            <button>Mumbai</button>
+            <button>Banglore</button>
+          </div>
+        </div>
+        <h3>
+          Start your care now by choosing from over 4000 doctors and 59
+          specialities
+        </h3>
+        <img
+          src="https://newassets.apollo247.com/cms/2022-04/One-Tap_0.gif"
+          alt=""
+        />
+        <h3>TOP SPECIALTIES</h3>
+        <hr />
+        <div class="specialities">
+          <div class="box">
+            <h6>Covid Consultation</h6>
+            <img
+              src="https://prodaphstorage.blob.core.windows.net/specialties/2ffe13c1-efa3-4361-9dde-afafb53d4553.jpg"
+              alt=""
+            />
+            <p>Treatment of Covid-19</p>
+            <p>Cough, Fever, Breathlessness</p>
+          </div>
+          <div class="box">
+            <h6>Dermatology</h6>
+            <img
+              src="https://prodaphstorage.blob.core.windows.net/specialties/ee249e8a-950a-489c-8a33-8846889831f5.jpg"
+              alt=""
+            />
+            <p>Specialists for skin and hair treatments</p>
+            <p>Rashes, Pimples, Acne, Hairfall, Dandruff</p>
+          </div>
+          <div class="box">
+            <h6>General Physician/ Internal Medicine</h6>
+            <img
+              src="https://newassets.apollo247.com/specialties/ic_general_medicine.png"
+              alt=""
+            />
+            <p>Managing acute medical conditions</p>
+            <p>Typhoid, Abdominal Pain, Migraine, Infections</p>
+          </div>
+          <div class="box">
+            <h6>Paediatrics</h6>
+            <img
+              src="https://newassets.apollo247.com/specialties/ic_paediatrics.png"
+              alt=""
+            />
+            <p>Specialists to care and treat children</p>
+            <p>Constipation, Puberty, Nutrition, Autism</p>
+          </div>
+        </div>
+      </div>
+      <div class="box3">
+        <h3>Why Apollo247</h3>
+        <ul>
+          <li>Round-the-clock doctor availability</li>
+          <li>Broad range of Specialities</li>
+          <li>Detailed digital prescriptions</li>
+          <li>Order medicines & tests online</li>
+          <li>Digitised health records</li>
+        </ul>
+        <h1>How Doctor Consultation Works</h1>
+        <div class="btn">
+          <button class="btn1">Text/Audio/Video</button>
+          <button class="btn2">Meet in Person</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
