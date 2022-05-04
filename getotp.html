@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+            background-color: #02475b;
+            padding: 100px 20px;
+            
+        }
+        #checkbox+p{
+            
+            display: inline-block;
+        }
+        h1{
+            color: #02475b;
+            font-size: 36px;
+            font-family: IBM Plex Sans,sans-serif;
+            font-weight: 600;
+        }
+        h3{
+            color: #0087ba;
+            margin: 10px 0;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: normal;
+        }
+        #submit{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(235, 195, 121);
+            font-size: 25px;
+            color: white;
+        }
+        p{
+            color: grey;
+            line-height:30px ;
+        }
+        div{
+            padding: 20px;
+            width: 270px;
+            height: auto;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        #number{
+            width: 200px;
+            height: 30px;
+            margin-right: 10px;
+            
+        }
+        
+        #parent{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    
+       <div id="parent">
+        <h1> HI</h1>
+        <h3>Please Enter Your Mobile Number</h3>
+        <form id="form">
+          
+            <input type="text" placeholder="enter your number" id="number" min="0" max="9" required minlength="10" maxlength="10" >
+            <button id="submit">--></button>
+         <p>OTP will be on your screen</p>
+         <input type="checkbox" id="checkbox" onclick="checkboxfunctio()" >
+         <p> by signing up ,i agree to the </p>
+         <br>
+         
+         <p>the <a href="https://www.apollo247.com/terms"> Privacy Terms and condition <span><br></span></a>of apollo 24*7</p>
+        
+        </form>
+       </div>
+</body>
+</html>
+<script>
+    var otparr=JSON.parse(localStorage.getItem("otpdata"))||[]
+    function checkboxfunctio(){
+        var summit= document.querySelector("#submit")
+       summit.style.color ="green"
+       summit.style.cursor="pointer"
+       var input =document.querySelector("#number").value
+       console.log(input)
+       summit.addEventListener("click",signupfunction)
+          
+      
+       
+   
+    }
+    function signupfunction(){
+       event.preventDefault()
+      var password=generateOTP()
+       function generateOTP()
+{
+
+    var digits = '0123456789';
+
+    var otpLength = 4;
+
+    var otp = '';
+
+    for(let i=1; i<=otpLength; i++)
+
+    {
+              
+        var index = Math.floor(Math.random()*(digits.length));
+       
+
+        otp = otp + digits[index];
+
+    }
+
+    return otp ;
+
+}
+if(document.querySelector("#number").value ==""){
+ alert("plz fill ur number")
+   }
+   else{
+       alert(password)
+      var obj ={
+          otp:password
+      }
+      otparr.push(obj)
+      localStorage.setItem("otpdata",JSON.stringify(otparr))
+      window.location.href="enterotp.html"
+   }
+    
+}  
+   
+</script>
