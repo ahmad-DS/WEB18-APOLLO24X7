@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: whitesmoke;
+  position: relative;
+}
+.container {
+  width: 87%;
+  margin: auto;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+}
+/* =============================         navBar         ===================================== */
+nav {
+  /* overflow: hidden; */
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  /* border: 2px dashed red; */
+  padding: 5px 2px;
+  /* margin-bottom: 2px; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.logo > img {
+  width: 170px;
+  height: 80px;
+  padding: 12px 35px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.content > .text {
+  margin-right: 20px;
+  width: 13%;
+  line-height: 13px;
+  padding-top: 15px;
+}
+.text > a {
+  text-decoration: none;
+}
+.first {
+  color: #02475b;
+  font-size: 13px;
+  font-weight: 800;
+  border-bottom: teal 1px solid;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.second {
+  color: #02475b;
+  font-size: 12px;
+}
+.cart_logo {
+  margin-right: 20px;
+  padding-top: 25px;
+}
+.cart_logo > img {
+  width: 25px;
+}
+.user_logo {
+  margin-right: 20px;
+  padding-top: 10px;
+}
+.user_logo > img {
+  width: 60px;
+}
+/* =======================================    Body   ================================= */
+/* ======     cover     ===== */
+#cover {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.appointment {
+  /* border: dashed greenyellow/ 2px; */
+  width: 40%;
+  /* margin: 20px; */
+  padding: 40px;
+}
+.heading > h1 {
+  font-size: 56px;
+  color: #02475b;
+  margin-bottom: 20px;
+}
+.heading > p {
+  color: #0087ba;
+  font-size: 17px;
+  font-weight: 600;
+  width: 100%;
+}
+.shop_option {
+  margin-top: 30px;
+}
+.book_app {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background: linear-gradient(105.88deg, #2c4c70 0.63%, #5eacb0 102.46%);
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.book_app > p {
+  margin-left: 20px;
+  font-weight: 600;
+}
+.book_app > p > span {
+  margin-left: 05px;
+}
+.buy_med {
+  display: flex;
+  width: 100%;
+  /* justify-content: center; */
+  align-items: center;
+  background: linear-gradient(105.88deg, #2c4c70 0.63%, #5eacb0 102.46%);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.buy_med > img {
+  width: 40px;
+  height: 40px;
+}
+.buy_med > p {
+  margin-left: 20px;
+  font-weight: 600;
+}
+.buy_med > p > span {
+  margin-left: 62px;
+}
+.test {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  /* width: ; */
+}
+.doTest,
+.report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid red 1px; */
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.report {
+  margin-left: 20px;
+}
+.doTest > img,
+.report > img {
+  margin-right: 12px;
+}
+.poster {
+  /* border: 3px solid tomato; */
+  width: 57%;
+}
+.poster > img {
+  height: 100%;
+}
+/* =====carousel Area===== */
+.carousel {
+  /* border: 2px dashed red; */
+  position: relative;
+}
+.carousel_textarea {
+  width: 50%;
+  margin: 20px;
+  /* border: 1px solid green; */
+  padding: 10px 40px;
+  position: absolute;
+  bottom: 5px;
+}
+.carousel_textarea > h1 {
+  color: white;
+  font-size: 35px;
+  padding: 10px;
+}
+.carousel_textarea > p {
+  color: #02475b;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 10px;
+}
+.carousel_textarea > div {
+  background-color: white;
+  border-radius: 10px;
+  /* display: inline; */
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  margin-left: 10px;
+}
+.carousel_textarea > div > span:nth-child(1) {
+  color: #fc9916;
+  font-weight: 600;
+}
+.carousel_textarea > div > span:nth-child(2) {
+  color: #02475b;
+  font-size: 18px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #fc9916;
+  border: 1px solid red;
+  border-radius: 70%;
+  padding: 10px;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}
+.carousel_textarea > div > p {
+  color: #02475b;
+  font-size: 13px;
+  font-weight: 600;
+}
+.banner {
+  width: 100%;
+  height: 60%;
+  padding: 20px 40px;
+  margin: 10 auto;
+}
+.banner > img {
+  width: 84%;
+  height: 60%;
+}
+/* =====covid_query===== */
+.covid19_queries {
+  /* border: 1px dashed red; */
+  width: 95%;
+  margin: 20px auto;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.covid19_queries > h2 {
+  color: #07ae8b;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.covid19box {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+}
+.covid_query {
+  /* border: 1px solid green; */
+  padding: 10px 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.covid_query > img {
+  width: 25px;
+  margin-right: 15px;
+}
+.covid_query > p {
+  color: #fc9916;
+  font-size: 13px;
+}
+/* section to come */
+/* section to come */
+/* -------text_area---------- */
+.text_area {
+  margin-top: 1px;
+  margin-bottom: 30px;
+  padding: 0px 35px;
+}
+.topic {
+  color: #02475b;
+  font-size: 15px;
+  font-weight: 700;
+}
+.topic_gap {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  line-height: 1.5;
+}
+.topic_gaap {
+  margin-top: 25px;
+  line-height: 1.5;
+}
+.data {
+  color: #02475b;
+  font-size: 15px;
+  text-align: left;
+  line-height: 1.5;
+  word-spacing: 5px;
+}
+.data_list {
+  color: #02475b;
+  font-size: 15px;
+  text-align: left;
+  line-height: 1.5;
+  word-spacing: 5px;
+  padding: 20px 35px;
+}
+.p_gap {
+  margin-top: 20px;
+}
+.teda {
+  font-style: italic;
+}
+/* =======footer======= */
+footer {
+  background-color: #020d11;
+  padding: 30px 60px 70px;
+}
+.foot_logo {
+  text-align: center;
+}
+.foot_logo > a > img {
+  width: 105px;
+}
+.fList {
+  margin-bottom: 30px;
+}
+.fList > h3 {
+  font-size: 15px;
+  color: #ffae45;
+  margin-bottom: 30px;
+}
+.list_flex {
+  display: flex;
+  gap: 12px 25px;
+  flex-wrap: wrap;
+}
+.list_flex > li {
+  /* border: 1px solid red; */
+  font-size: 18px;
+  color: white;
+  margin-left: 10px;
+  /* margin-top: 3px; */
+}
+.list_flex > li > a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  /* border: 1px solid green; */
+}
