@@ -63,14 +63,14 @@ nav {
   margin-right: 20px;
   padding-top: 25px;
 }
-.cart_logo > img {
+.cart_logo > a > img {
   width: 25px;
 }
 .user_logo {
   margin-right: 20px;
   padding-top: 10px;
 }
-.user_logo > img {
+.user_logo > a > img {
   width: 60px;
 }
 /* =======================================    Body   ================================= */
