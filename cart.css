@@ -1,0 +1,11 @@
+#membership{
+    padding:10px;
+    background-color: white;
+    border:2px dashed rgb(62, 183, 110);
+    border-radius: 10px;
+}
+#membership>div:nth-child(1){
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
