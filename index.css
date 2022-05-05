@@ -422,6 +422,7 @@ nav {
   color: #fc9916;
   display: none;
   font-size: 14px;
+  font-weight: 600;
 }
 /* =======footer======= */
 footer {
@@ -541,7 +542,19 @@ footer {
     grid-template-columns: repeat(2, 200px);
     grid-template-rows: repeat(2, auto);
   }
-
+  .hiddenPart {
+    display: block;
+  }
+  .hideDiv {
+    display: none;
+  }
+  .showHideDiv {
+    display: block;
+  }
+  .hideVisibleDiv {
+    display: none;
+    color: white;
+  }
   footer {
     display: flex;
     flex-direction: column;
