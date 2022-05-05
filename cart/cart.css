@@ -140,3 +140,8 @@
 .card>div:last-child{
     text-align: right;
 }
+#saving_amount{
+    font-size: 30px;
+    font-weight: bold;
+    color:skyblue;
+}

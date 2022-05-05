@@ -167,4 +167,14 @@ function displayData(data){
     var savings=cartItems.reduce(function(sum,element){
         return sum+(+element.price-element.sellingPrice)
     },0);
-    console.log(savings)
+    console.log(savings);
+
+    document.getElementById("saving_amount").innerText="₹"+savings;
+     
+// finding total payable amount
+var total_amount=cartItems.reduce(function(sum,element){
+    return sum+(+element.sellingPrice)
+},0);
+console.log(total_amount);
+
+document.getElementById("cart_total").innerText="₹"+total_amount;
