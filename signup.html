@@ -48,16 +48,7 @@
             margin: 5px 0px;
         }
         
-        #button>button{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            width: 30%;
-            height: 40px;
-            border: 0px;
-            border-radius: 10px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-           color: green;
-        } 
+       
         #summit{
             background-color: #fed984;
             border: 0px;
@@ -67,7 +58,8 @@
         } 
         #checkbox{
              margin-right: 500px;
-        }                
+        } 
+                     
 
     </style>
 </head>
@@ -80,19 +72,21 @@ Welcome to apollo 24|7
           <form id="form">
               <label for="username"> FULL NAME</label>
               <br>
-              <input type="text" class="username" placeholder="FIRST NAME">
+              <input type="text" id="firstname" placeholder="FIRST NAME">
               <br>
-              <input type="text" class="username" placeholder="LAST NAME">
+              <input type="text" id="lastname" placeholder="LAST NAME">
               <br>
             <label for="dob"> DATE OF BIRTH</label>
             <br>
-            <input type="text" id="dob" placeholder="dd/mm/yyyy">
+            <input type="text" id="dob" placeholder="dd/mm/yyyy" required minlength="10" maxlength="10">
             <br>
             <label for="buttom"> GENDER</label>
-            <div id="button">
-                <button>MALE</button>
-                <button>FEMALE</button>
-            </div>
+            <select  id="gender">
+                <option value=""> --/--</option>
+                <option > MALE</option>
+                <option > FEMALE</option>
+            </select>
+            <br>
             <label for="email">Email Address (Optional)
             </label>
             <br>
@@ -100,9 +94,37 @@ Welcome to apollo 24|7
             <br>
             
             <p>send me personalised health tips & offers on Whatsapp </p>
-            <input type="checkbox" id="checkbox">
+            <input type="checkbox" id="checkbox" onClick="checkboxfunction()">
             <input type="submit" id="summit" >
           </form>
       </div>
 </body>
 </html>
+<script>
+    var signupdetailarr=JSON.parse(localStorage.getItem("signupdetaildata"))||[]
+    function checkboxfunction(){
+        if(form.firstname.value!="" &&form.lastname.value!=""&&form.dob.value!=""&&form.gender.value!="" ){
+            var summit =document.getElementById("summit")
+            summit.style.backgroundColor="orange"
+            form.addEventListener("submit",function(){
+                event.preventDefault()
+                 
+               var obj={
+                  firstname:form.firstname.value,
+                  lastname:form.lastname.value,
+                  age: form.dob.value,
+                  gender:form.gender.value
+               }
+               signupdetailarr.push(obj)
+               localStorage.setItem("signupdetaildata",JSON.stringify(signupdetailarr))
+               
+            })
+               
+               
+        }
+        else{
+            alert("Please fill all requirement")
+        }
+    }
+    
+</script>
