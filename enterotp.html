@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            padding: 0px;
+            margin: 0%;
+            padding: 10px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #02475b;
+            padding: 100px 20px;
+        }
+        #parent{
+            background-color: azure;
+            height: auto;
+            width: 280px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 30px;
+        }
+        a,h1{
+            color: darkslategray
+        }
+        p{
+            color: #0087ba;
+            font-size: 17px;
+            margin-top: 10px;
+            font-weight: 500;
+            line-height: 1.41;
+            margin-bottom: 30px;
+        }
+        #gonext{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(227, 227, 110);
+        }
+        #resend{
+           border: 0px;
+           color: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <div id="parent">
+             <a href="getotp.html"> < back</a>
+             <h1>Greate</h1>
+             <p>Now type in the OTP sent to you for authentication</p>
+             <form id="form">
+                <input type="text" id="otp" required minlength="4" maxlength="4">
+                <button id="gonext" onClick="checkotp()"> > </button>
+                <br>
+                <button id="resend" onClick="resendotp()"> Resend otp</button>
+             </form>
+        </div>
+    
+</body>
+</html>
+<script>
+     
+     var otparr=JSON.parse(localStorage.getItem("otpdata"))||[]
+    
+    function checkotp(){
+        
+        var otplength =form.otp.value
+         event.preventDefault()
+         var a =0
+        for(var i =0;i<otparr.length;i++){
+            if(otparr[i].otp ==otplength){
+                alert("Verifiction Succesfull")
+                a =1
+                break;
+            }
+        }
+        if(a ==0){
+            alert("Incorrect OTP")
+        }
+        else{
+            window.location.href="signup.html"
+        }
+     }
+ function resendotp(){
+     event.preventDefault()
+    var password=generateOTP()
+       function generateOTP()
+{
+
+    var digits = '0123456789';
+
+    var otpLength = 4;
+
+    var otp = '';
+
+    for(let i=1; i<=otpLength; i++)
+
+    {
+              
+        var index = Math.floor(Math.random()*(digits.length));
+       
+
+        otp = otp + digits[index];
+
+    }
+
+    return otp ;
+
+}
+alert(password)
+var obj ={
+          otp:password
+      }
+      otparr.push(obj)
+      localStorage.setItem("otpdata",JSON.stringify(otparr))
+      
+ }
+</script>
