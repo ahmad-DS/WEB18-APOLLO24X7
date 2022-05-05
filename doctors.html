@@ -334,11 +334,39 @@
         list-style: none;
         padding: 0px 0px 10px 0px;
       }
+      details {
+        border-bottom: 0.1px solid rgb(125, 214, 214);
+        margin-bottom: 10px;
+        /* font-weight: 100; */
+      }
+      /* details > summary::after {
+        transition: transform 0.3s ease;
+      } */
+      /* details[open] > summary > .fa-rotate-180::after {
+        transform: rotate(180deg);
+      } */
+      /* .rotate {
+        transform: rotate(180deg);
+      } */
       details > summary::after {
+        content: ">";
+        font-size: 20px;
         transition: transform 0.3s ease;
       }
-      details[open] > summary > .fa-rotate-180::after {
-        transform: rotate(180deg);
+      details[open] > summary::after {
+        /* content: attr(".rotate"); */
+        transform: rotate(90deg);
+      }
+      /* .rotate.down {
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      } */
+      strong {
+        color: #02475b;
+      }
+      summary + p {
+        color: #02475b;
       }
     </style>
   </head>
@@ -1154,7 +1182,7 @@
               >What is an online doctor consultation or online medical
               consultation?</strong
             >
-            <i class="fa fa-arrow-down fa-rotate-180" aria-hidden="true"></i>
+            <!-- <i class="fa fa-arrow-down rotate" aria-hidden="true"></i> -->
           </summary>
 
           <p>
