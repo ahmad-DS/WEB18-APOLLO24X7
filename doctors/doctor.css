@@ -1,0 +1,375 @@
+#container {
+    font-family: "Poppins", sans-serif;
+    border: 1px solid red;
+    height: auto;
+    width: 80%;
+    margin: 0 10% 0 10%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .box2 {
+    border: 1px solid green;
+    width: 60%;
+  }
+
+  .box1 {
+    height: auto;
+    width: auto;
+    padding-left: 2%;
+    margin-top: 5%;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: whitesmoke;
+    padding-bottom: 10px;
+  }
+
+  i {
+    color: teal;
+  }
+
+  input {
+    border: none;
+  }
+
+  .box1 > h1 {
+    font-size: 15px;
+    color: teal;
+  }
+
+  input + hr + h6 {
+    font-size: 12px;
+  }
+
+  button {
+    color: teal;
+    background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+  }
+
+  input + hr {
+    height: 1px;
+    background-color: teal;
+    border: none;
+    margin-right: 2%;
+  }
+
+  .button {
+    margin: -15px 0px 0px;
+  }
+
+  h3 {
+    font-size: 15px;
+    color: teal;
+    width: auto;
+  }
+
+  h3 + img {
+    width: 100%;
+    height: 150px;
+  }
+
+  img + h3 {
+    color: #02475b;
+  }
+
+  .specialities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 20px;
+    margin: auto;
+    width: 98%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+
+  .specialities > div {
+    justify-content: center;
+  }
+
+  .box > h6 {
+    text-align: center;
+    color: #02475b;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h6 + img {
+    height: 35px;
+    width: 35px;
+  }
+
+  h6 + img + p {
+    font-size: 10px;
+    color: rgb(109, 208, 208);
+    text-align: center;
+  }
+
+  img + p + p {
+    font-size: 10px;
+    color: rgb(3, 68, 68);
+    text-align: center;
+  }
+
+  .specialities > .box {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+      rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+      rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+      rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    border-radius: 10px;
+  }
+
+  #container > .box3 {
+    height: auto;
+    width: 35%;
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+  .box3 > h3 {
+    color: #01667c;
+  }
+
+  .box3 > ul {
+    color: #02475b;
+    padding-bottom: 50px;
+  }
+
+  ul + h1 {
+    font-size: 15px;
+    color: #01667c;
+  }
+
+  .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    height: auto;
+    width: 50%;
+    /* border: 1px solid rebeccapurple; */
+    padding: 0 50px 0 50px;
+  }
+
+  .btn > button {
+    height: 50px;
+    width: 150px;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+
+  .otherSpecialities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .specialities + h3 {
+    color: #02475b;
+  }
+
+  .otherSpecialities > .common {
+    height: 110px;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    border-radius: 10px;
+  }
+
+  .newImg {
+    height: 100%;
+    width: 20%;
+    padding-right: 20px;
+    /* border: 1px solid red; */
+  }
+
+  .common > div > img {
+    height: 50%;
+    margin: 10px 0 0 10px;
+  }
+  .para1 {
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -15px;
+  }
+  .para1 + div > h6 {
+    color: #02475b;
+  }
+  .arrow {
+    height: 100%;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .para {
+    width: 95%;
+    height: 100%;
+    border-bottom: 1px solid rgb(3, 56, 56);
+    margin-left: 5px;
+  }
+
+  .para > p {
+    font-size: 12px;
+    color: #02475b;
+    margin-bottom: -10px;
+  }
+
+  .para:first-child {
+    font-size: 12px;
+  }
+
+  p + h5 {
+    font-size: 11px;
+  }
+
+  .para > div {
+    height: 100%;
+    width: 50%;
+    border: 1px solid black;
+    font-size: 25px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .para + div > img {
+    height: 100%;
+    width: 50%;
+  }
+  .block {
+    height: 1000px;
+    width: 100%;
+    /* border: 1px solid yellow; */
+  }
+  .online {
+    display: none;
+  }
+  .offline {
+    display: none;
+  }
+  .text {
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    margin-top: 20px;
+    /* display: none; */
+  }
+  .person {
+    height: 100px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    margin-top: 20px;
+    /* display: none; */
+  }
+
+  .ul > li {
+    display: flex;
+    margin: -5px;
+  }
+  ul > li {
+    color: #02475b;
+  }
+  .img {
+    margin: 30px;
+    height: auto;
+    width: auto;
+    border: 1 px solid black;
+  }
+
+  .img + div {
+    font-size: 10px;
+    margin-top: 10px;
+    margin-right: 50px;
+  }
+  li > p {
+    color: #02475b;
+  }
+  li > img + p {
+    font-size: 15px;
+    color: rgb(10, 68, 68);
+    margin-left: 15px;
+  }
+  .blog {
+    font-family: "Poppins", sans-serif;
+    border: 1px solid red;
+    height: auto;
+    width: 76%;
+    margin: 25px 10% 0 10%;
+    padding: 0 2% 0 2%;
+  }
+  .blog > p {
+    color: #02475b;
+  }
+  span {
+    color: #02475b;
+  }
+  .summary {
+    padding: 10px 25px 20px 25px;
+    border: 1px solid darkblue;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  details > summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+    padding: 0px 0px 10px 0px;
+  }
+  details {
+    border-bottom: 0.1px solid rgb(125, 214, 214);
+    margin-bottom: 10px;
+    /* font-weight: 100; */
+  }
+  /* details > summary::after {
+    transition: transform 0.3s ease;
+  } */
+  /* details[open] > summary > .fa-rotate-180::after {
+    transform: rotate(180deg);
+  } */
+  /* .rotate {
+    transform: rotate(180deg);
+  } */
+  details > summary::after {
+    content: ">";
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+  details[open] > summary::after {
+    /* content: attr(".rotate"); */
+    transform: rotate(90deg);
+  }
+  strong {
+    color: #02475b;
+  }
+  summary + p {
+    color: #02475b;
+  }
+  /* Button Section */
+  /* .btn1:link {
+    color: teal;
+    background-color: black;
+  }
+  .btn1:hover {
+    background-color: green;
+  }
+  .btn1:active,
+  .btn1:visited {
+    background-color: black;
+  } */
+  .btn1:focus,
+  .btn2:focus {
+    background-color: black;
+    color: azure;
+  }
