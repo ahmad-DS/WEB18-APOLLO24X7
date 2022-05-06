@@ -88,7 +88,7 @@
 </body>
 </html>
 <script>
-    var otparr=JSON.parse(localStorage.getItem("otpdata"))||[]
+    var otparr=[]
     function checkboxfunctio(){
         var summit= document.querySelector("#submit")
        summit.style.color ="green"
@@ -98,7 +98,7 @@
        summit.addEventListener("click",signupfunction)
           
       
-       
+    //    JSON.parse(localStorage.getItem("otpdata"))||
    
     }
     function signupfunction(){
@@ -133,7 +133,8 @@ if(document.querySelector("#number").value ==""){
    else{
        alert(password)
       var obj ={
-          otp:password
+          otp:password,
+          mobilenumber:form.number.value
       }
       otparr.push(obj)
       localStorage.setItem("otpdata",JSON.stringify(otparr))
