@@ -1,3 +1,5 @@
+
+
 #membership{
     box-sizing: border-box;
     width:100%;
@@ -140,8 +142,18 @@
 .card>div:last-child{
     text-align: right;
 }
+.card p,.card h4,.card h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 #saving_amount{
     font-size: 30px;
     font-weight: bold;
     color:skyblue;
+    border-bottom:1px dashed green;
+    /* text-decoration:underline green dotted 1px; */
+}
+#total{
+    color:#01475b;
+    font-weight: 600;
 }
