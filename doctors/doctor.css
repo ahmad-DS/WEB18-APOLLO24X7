@@ -16,6 +16,10 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 10px;
     background-color: white;
+    transition: 0.3s;
+  }
+  a:hover{
+    transform: translate(0, -10px);
   }
   .box1 {
     height: auto;
@@ -186,11 +190,16 @@
   .otherSpecialities > .common {
     height: 110px;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     display: flex;
     border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
   }
-
+  .otherSpecialities>.common:hover{
+    transform: translate(0, -10px);
+  }
   .newImg {
     height: 100%;
     width: 20%;
@@ -379,4 +388,45 @@
   .btn2:focus {
     background-color: black;
     color: azure;
+  }
+
+  /* footer */
+  footer {
+    background-color: #020d11;
+    padding: 30px 60px 70px;
+  }
+  .foot_logo {
+    text-align: center;
+  }
+  .foot_logo > a > img {
+    width: 105px;
+  }
+  .fList {
+    margin-bottom: 30px;
+  }
+  .fList > h3 {
+    font-size: 15px;
+    color: #090602;
+    margin-bottom: 30px;
+  }
+  .fList > h3 > span {
+    display: none;
+  }
+  .list_flex {
+    display: flex;
+    gap: 12px 25px;
+    flex-wrap: wrap;
+  }
+  .list_flex > li {
+    /* border: 1px solid red; */
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
+    /* margin-top: 3px; */
+  }
+  .list_flex > li > a {
+    font-size: 15px;
+    color: green;
+    text-decoration: none;
+    /* border: 1px solid green; */
   }

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>covid Doctor list</title>
     <style>
       .mainBox {
-        height: auto;
-        width: 400px;
-        border: 1px solid red;
+        height: 300px;
+        width: auto;
         border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
       .subBox1 {
         height: 30%;
@@ -29,9 +29,8 @@
       .subBox3 {
         height: 90%;
         width: 75%;
-        margin: auto;
+        padding-left: 10px;
       }
-      .subBox3 > h4,
       .subBox3 > p {
         margin: 5px;
       }
@@ -40,6 +39,7 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
+        margin-top: 50px;
       }
       .subBox4 {
         height: auto;
@@ -56,49 +56,22 @@
       }
       img + p {
         margin: 20px;
-        margin-top: auto;
+        margin-top: 15px;
       }
-
-      .subBox7 {
-        display: flex;
-        margin: 10px;
-        height: 20px;
-        margin-top: -20px;
+      .covid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+      strong {
+        padding-top: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="mainBox">
-      <div class="subBox1">
-        <div class="subBox2">
-          <img
-            src="https://newassets.apollo247.com/images/ic-mascot.png"
-            alt=""
-          />
-        </div>
-        <div class="subBox3">
-          <h4>Dr. Viny Kantroo</h4>
-          <h4>ENT SPECIALIST</h4>
-          <p>12 YRS EXP</p>
-          <p>DNB Resp, Diseases, MRCP</p>
-        </div>
-      </div>
-      <div class="subBox5">
-        <div class="subBox4">
-          <strong>Rs - 1200/-</strong>
-        </div>
-      </div>
-      <div class="subBox6">
-        <img src="https://newassets.apollo247.com/images/language.svg" alt="" />
-        <p>English, Hindi, Telgu</p>
-      </div>
-      <div class="subBox6">
-        <img
-          src="https://newassets.apollo247.com/images/new-location.svg"
-          alt=""
-        />
-        <p>South Delhi</p>
-      </div>
-    </div>
+    <div class="covid"></div>
   </body>
 </html>
+
+<script src="doctors.js"></script>
