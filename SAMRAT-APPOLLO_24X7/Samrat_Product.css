@@ -4,7 +4,6 @@ body {
     margin: auto;
     border: 1px solid rd;
     background-color: #dcdfce;
-    
     height: 2000px;
      
  }
@@ -16,7 +15,7 @@ body {
      color: rgb(1, 71, 91);
      height: auto;
      margin: auto;
-     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+     @import url('https://fonts.googleaps.com/css2?family=Poppins:wght@300&display=swap');
      font-family: 'Poppins', sans-serif;
  }
  nav {
@@ -209,7 +208,7 @@ body {
 
  }
 
- .menu>ul>li>a {
+ .menu>ul>li> {
      text-decoration: none;
      color: rgba(2, 71, 91, .7);
      font-weight: bolder;
@@ -314,22 +313,19 @@ body {
  }
 
 
-.smrt+.box2 {
-    position:relative;
-    position: fixed;
-}
+
 .smrt {
     position: absolute;
-   
-    /* position: static; */
-    
-    /* position: relative; */
     width: 2%;
     height: 4%;
-    padding-left: 3.60%;
+    padding-left: 3.8%;
     margin-top: -10px;
 }
 
+.smrt+.box2 {
+    position:relative;
+    
+}
 .discount {
     position: absolute;
     text-decoration: none;
