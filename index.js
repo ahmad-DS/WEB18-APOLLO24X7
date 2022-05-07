@@ -8,22 +8,19 @@ function showRemaining(){
         sDivs[i].className = ".showHideDiv"
     } 
 }
+// =====carousel js=====//
 var imgIndex = 1;
-showImage(imgIndex);
+setInterval(showImage(imgIndex),2000)
+;
 function imgSlider(n){
     imgIndex += n;
-    // console.log(imgIndex,"b",n)
     showImage(imgIndex)
-    // console.log(imgIndex,"a",n)
-
 }
 function currentSlide(n){
-    // imgIndex = n;
     showImage(n)
 }
 function showImage(n){
     var images = document.querySelectorAll(".carousel_image");
-    // console.log(images)
     if(n<1){
         imgIndex = images.length;
         n = images.length;

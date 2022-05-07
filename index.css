@@ -5,8 +5,7 @@
   font-family: sans-serif;
 }
 body {
-  background-color: whitesmoke;
-  position: relative;
+  background-color: #dcdfce;
 }
 .container {
   max-width: 1100px;
@@ -182,18 +181,20 @@ nav {
 .carousel {
   width: 100%;
   height: auto;
-  border: 2px dashed red;
+  /* border: 2px dashed red; */
   border-radius: 5px;
   padding: 20px;
   position: relative;
   /* margin: 20px; */
 }
 .carousel_container {
-  background-color: green;
+  background-color: #fff;
   width: 90%;
   height: auto;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 .carousel_image {
   width: 100%;
@@ -203,12 +204,13 @@ nav {
 .carousel_image > img {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
 }
 .previous,
 .next {
   color: teal;
   position: absolute;
-  top: 50%;
+  top: 30%;
   /* padding: 5px; */
   font-size: 25px;
   border: none;
@@ -223,16 +225,19 @@ nav {
 }
 .radio_button {
   /* background-color: #fff; */
-  /* padding: 5px; */
+  padding: 15px 0px 15px 70px;
 }
 .radio {
-  width: 10px;
-  height: 10px;
+  width: 1px;
+  height: 1px;
   border-radius: 50%;
-  background-color: black;
-  border: 2px solid green;
-  /* margin-top: 15px; */
+  background-color: grey;
+  border: 1px solid rgba(0, 0, 0, 0.501);
+  margin-left: 10px;
   padding: 5px;
+}
+.radio:hover {
+  background-color: black;
 }
 /* .carousel_textarea {
   width: 50%;
