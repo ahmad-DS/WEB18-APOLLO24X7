@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mainBox {
+        height: auto;
+        width: 400px;
+        border: 1px solid red;
+        border-radius: 10px;
+      }
+      .subBox1 {
+        height: 30%;
+        width: 95%;
+        margin: 10px;
+        display: flex;
+      }
+      .subBox2 {
+        height: 100%;
+        width: 25%;
+      }
+      .subBox2 > img {
+        height: 100%;
+        width: 100%;
+      }
+      .subBox3 {
+        height: 90%;
+        width: 75%;
+        margin: auto;
+      }
+      .subBox3 > h4,
+      .subBox3 > p {
+        margin: 5px;
+      }
+      .subBox5 {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .subBox4 {
+        height: auto;
+        width: 50%;
+        margin-left: 10px;
+      }
+      .subBox6 {
+        margin: 10px;
+        display: flex;
+        height: auto;
+      }
+      .subBox6 > img {
+        margin-top: -15px;
+      }
+      img + p {
+        margin: 20px;
+        margin-top: auto;
+      }
+
+      .subBox7 {
+        display: flex;
+        margin: 10px;
+        height: 20px;
+        margin-top: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainBox">
+      <div class="subBox1">
+        <div class="subBox2">
+          <img
+            src="https://newassets.apollo247.com/images/ic-mascot.png"
+            alt=""
+          />
+        </div>
+        <div class="subBox3">
+          <h4>Dr. Viny Kantroo</h4>
+          <h4>ENT SPECIALIST</h4>
+          <p>12 YRS EXP</p>
+          <p>DNB Resp, Diseases, MRCP</p>
+        </div>
+      </div>
+      <div class="subBox5">
+        <div class="subBox4">
+          <strong>Rs - 1200/-</strong>
+        </div>
+      </div>
+      <div class="subBox6">
+        <img src="https://newassets.apollo247.com/images/language.svg" alt="" />
+        <p>English, Hindi, Telgu</p>
+      </div>
+      <div class="subBox6">
+        <img
+          src="https://newassets.apollo247.com/images/new-location.svg"
+          alt=""
+        />
+        <p>South Delhi</p>
+      </div>
+    </div>
+  </body>
+</html>

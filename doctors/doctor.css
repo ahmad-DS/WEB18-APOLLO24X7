@@ -11,7 +11,12 @@
     border: 1px solid green;
     width: 60%;
   }
-
+  a{
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    background-color: white;
+  }
   .box1 {
     height: auto;
     width: auto;
@@ -29,6 +34,8 @@
 
   input {
     border: none;
+    width: 90%;
+    height: 20px;
   }
 
   .box1 > h1 {
