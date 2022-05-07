@@ -7,7 +7,7 @@
 //     })
 // }
 // 
-
+// var cartItems=JSON.parse(localStorage.getItem("addtocart"))||[];
 var cartItems = [
     {
         "id": 4791,
@@ -115,7 +115,8 @@ displayData(cartItems);
 
 function displayData(data) {
     document.querySelector("#added_items").innerHTML = "";
-    data.forEach(function (element) {
+    document.querySelector("#total_items").innerText=data.length;
+    data.forEach(function (element,index) {
         var card = document.createElement("div");
         card.setAttribute("class", "card");
 
@@ -124,6 +125,7 @@ function displayData(data) {
 
         var leftdiv1 = document.createElement("div");
         var thumbnail = document.createElement("img");
+       
         thumbnail.setAttribute("src", "https://newassets.apollo247.com/pub/media" + element.small_image);
         thumbnail.style.width = "50px";
         thumbnail.style.height = "50px";
@@ -171,6 +173,13 @@ function displayData(data) {
 
         var right = document.createElement("div");
         var del = document.createElement("img");
+        del.addEventListener("click",function(){
+            
+            cartItems.splice(index,1);
+            displayData(cartItems);
+            // localStorage.set
+        })
+        del.setAttribute("class","delete")
         del.setAttribute("src", "https://newassets.apollo247.com/images/ic_delete.svg");
         var p3 = document.createElement("p");
         var n = ((+element.price - element.sellingPrice) * 100 / +element.price).toFixed(2);
