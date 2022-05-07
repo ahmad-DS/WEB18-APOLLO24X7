@@ -97,7 +97,7 @@ body {
    .sam_menu>ul>li>a {
        text-decoration: none;
        color: rgb(2, 71, 91, .7);
-       font-weight: ;
+       font-weight:45;
        margin-left: 0px;  
      
    }
@@ -315,7 +315,7 @@ body {
 
 
 .smrt+.box2 {
-    position:relative
+    position:relative;
     position: fixed;
 }
 .smrt {
@@ -507,7 +507,7 @@ body {
  }
 
  details>summary::after {
-     content: url(/samrat-image/down-arrow-svgrepo-com.svg);
+     content: url(down-arrow-svgrepo-com.svg);
      width: 16px;
      height: 16px;
      transition: transform 0.3s ease;
