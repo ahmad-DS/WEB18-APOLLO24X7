@@ -1,22 +1,189 @@
+
 body {
     width: 100%;
     margin: auto;
     border: 1px solid rd;
     background-color: #dcdfce;
+    
     height: 2000px;
      
  }
  #samrat{
-     width: 63%;
+     width: 1100px;
      background-color: white;
      border:6px solid darkbue;
      height: 1000px;
      color: rgb(1, 71, 91);
-     height: 8000px;
+     height: auto;
      margin: auto;
-     font-family: ibm_plex_sansregular;
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+     font-family: 'Poppins', sans-serif;
  }
+ nav {
+    position:stiky;
+    top: 0;
+    width: 99.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    background-color: white;
+    /* border: 2px solid red; */
+    padding: 5px 2px;
+    /* margin-bottom: 2px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-bottom: 0px;
+  }
+  .logo{
+      display: flex;
+     align-items: center;
+     justify-content: center;
+      
+  }
+  
+  .logo>div>h5{
+     font: 10px;
+  }
+  .logo > img {
+    width: 100px;
+    height: 80px;
+    padding: 12px 10px;
+    border: 2px solid rd;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content > .text {
+    margin-right: 20px;
+    width: 13%;
+    line-height: 13px;
+    padding-top: 15px;
+  }
+  .text > a {
+    text-decoration: none;
+  }
+  
+  .logo>img+div{
+      padding-left: 20px;
+      line-height: 20px;
+  }
+  .sam_menu {
+       display: flex;
+       /* justify-content: space-between; */
+       border: 1px solid rd;
+       width: 50%;
+       margin: auto;
+       margin-left: -20px;
+       margin-top: 10px;
+       background-color: white
+   }
+  
+   .sam_menu>ul {
+        display: inline-flex;
+       list-style: none;
+       color: rgb(2, 71, 91, .7);
+     
+   }
+  
+   .sam_menu>ul>li {
+       width: 95px;
+       margin-left: -20px;
+       font-size: 14px;
+       
+      
+  
+   }
+  
+   .sam_menu>ul>li>a {
+       text-decoration: none;
+       color: rgb(2, 71, 91, .7);
+       font-weight: ;
+       margin-left: 0px;  
+     
+   }
+  
+   .sam_submenu {
+       display: none;
+       
+  
+   }
+  
+   .sam_submenu>ul {
+       list-style: none;
+       font-size: 12px;
+    
+   }
+  
+   .sam_menu>ul>li:hover .sam_submenu {
+       display: block;
+       position: absolute;
+       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+       font-size: medium;
+       margin-top: 16px;
+       background-color: white;
+   }
+  
+   .sam_submenu>ul>li>a {
+       text-decoration: none;
+       color: rgba(2, 71, 91, .7);
+   }
+  
+   .sam_menu>ul>li:hover .sam_submenu>ul {
+       display: block;
+       /* text-align: center; */
+       padding: 10px;
+   }
+  
+   .sam_menu>ul>li:hover .sam_submenu>ul>li {
+       /* width: 0px; */
+       padding: 10px 0px 10px 0px;
+       border-bottom: 1px solid blck;
+       background-color: white;
+       border-radius: 0px;
+       text-align: center;
+  
+   }
+   #one{
+    
+     border: 1px solid orange;
+     padding: 10px;
+   }
+   .sam_menu>ul>li:hover .submenu>ul>li:last-child {
+       border-bottom: none;
+   }
+  .first {
+    color: #02475b;
+    font-size: 12px;
+    font-weight: 800;
+    border-bottom: teal 1.5px solid;
+    border: 1px solid gren;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .second {
+    color: #02475b;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .cart_logo {
+    margin-right: 20px;
+    padding-top: 25px;
+  }
+  .cart_logo > a > img {
+    width: 25px;
+  }
+  .user_logo {
+    margin-right: 20px;
+    padding-top: 10px;
+  }
+  .user_logo > a > img {
+    width: 50px;
 
+  }
+  
  .menu {
      display: flex;
      justify-content: space-between;
@@ -107,10 +274,13 @@ body {
      margin-top: -15px;
  }
  .box1{
+     display: grid;
+     grid-template-columns: repeat(6,1fr);
+
      height: auto;
      width: 100%;
      border: 2px solid rd;
-     display: flex;           
+     /* display: flex;            */
      margin-top: 20px;
  }
  .box1>div{
@@ -121,6 +291,10 @@ body {
      display: flex;
      border-radius: 10px;
  }
+ .box1>div:hover{
+    margin-top: -10px;
+    transition: 1s ease;
+}
  .box1>div>img{
      width: 40px;
      height: 40px;
@@ -138,8 +312,18 @@ body {
      font-size: 11px;
      padding-left: 10px;
  }
- .smrt {
+
+
+.smrt+.box2 {
+    position:relative
+    position: fixed;
+}
+.smrt {
     position: absolute;
+   
+    /* position: static; */
+    
+    /* position: relative; */
     width: 2%;
     height: 4%;
     padding-left: 3.60%;
@@ -156,15 +340,13 @@ body {
     font-weight: bold;
 
 }
-
-.smrt+.box2 {
-    position: relative;
-}
  .box2 {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
      height: auto;
      width: 96%;
      border: 2px solid rd;
-     display: flex;
+     /* display: flex; */
      gap: 20px;
      padding: 20px 0px 10px 0px;
      margin-bottom: 20px;
@@ -173,13 +355,16 @@ body {
 
  .box2>div {
      height: auto;
-     width: 100%;
-     border: 2px solid blak;
+     width: auto;
+     border: 2px solid blck;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
      margin: auto;
      border-radius: 10px;
      text-align: center;
      padding: 10px 20px 10px 20px;
+ }
+ .box2>div:hover{
+     margin-top: -10px;
  }
 
  .box2>div>img {
@@ -224,30 +409,32 @@ body {
      display: flex;
      border: 1px solid olve;
      text-align: center;
-     margin-top: -20px;
+     margin-top: -25px;
      margin-left: 20px;
+     border: 1px solid gry;
  }
 
  .circle {
      height: 25%;
      width: 20%;
-
-
+    
  }
 
  .circle+span {
      color: rgb(0, 160, 227);
      text-decoration: none;
-     font-size: 11px;
+     font-size: 10px;
      display: flex;
      align-items: center;
      margin-left: 8px;
      margin-top: px;
-     margin-bottom: 20px;
+     /* margin-bottom: 20px; */
+     border: 1px solid rd;
  }
  .samcart{
      font-size: 16px;
      font-weight: bold;
+     margin-top: 20px;
      margin-bottom: -10px;
      color: orange;
      background-color: white;
@@ -267,7 +454,8 @@ body {
      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
  }
  #sam_brand{
-     display: flex;
+     display: grid;
+     grid-template-columns: repeat(6,1fr);
      justify-content: space-around;
      gap:20px;
      margin-left: 10px;
@@ -281,8 +469,12 @@ body {
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
      padding:10px 30px 10px 30px;
      border-radius: 10px;
+     margin: auto;
 
  }
+ #sam_brand>img:hover{
+    margin-top: -10px;
+}
  #sam_world{
      width: 100%;
      margin-top: 5px;
@@ -333,3 +525,62 @@ body {
      font-size: 16px;
      font-weight: bolder;
  }
+
+ #sam_blacklast {
+    background-color: rgb(33, 32, 32);
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    height: 1000px;
+    padding:50px;
+    }
+#sam_blacklast>div{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+#sam_socialmedia{
+    display:flex;
+    border: 2px solid rd;
+}
+#sam_socialmedia>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    width:50px;
+    background-color: white;
+    border-radius:50%;
+    margin:0 10px;
+    
+}
+#sam_socialmedia>div>img{
+    height:30px;
+    width:30px;
+   
+
+
+}
+#sam_playstore>img{
+    height:50px;
+
+}
+#sam_blacklast>div:nth-child(2){
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rd;
+    margin-top: 50px;
+}
+@media all and (min-width:451px) and (max-width:750px){
+    .box1,.box2,#sam_brand{
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: auto;
+        }  
+  }
+  @media all and (min-width:50px) and (max-width:450px){
+    .box1,.box2,#sam_brand{
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto;
+        } 
+    }

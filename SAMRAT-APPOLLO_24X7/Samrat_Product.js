@@ -55,6 +55,12 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹32 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"650",
+            product_actprice:"530",
+            product_cb:"32",
+
+
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -67,6 +73,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹35 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"666",
+            product_actprice:"587",
+            product_cb:"35",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -79,6 +89,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹25 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"476",
+            product_actprice:"418",
+            product_cb:"25",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -91,6 +105,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹31 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"637",
+            product_actprice:"519.9",
+            product_cb:"31",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -102,7 +120,11 @@
             product_disprice:"Rs 518",
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹31 extra cashback",
-            product_atc:"ADD TO CART"
+            product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"599",
+            product_actprice:"518",
+            product_cb:"31",
         }
      ]
          
@@ -180,6 +202,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹3 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"32",
+            product_actprice:"29",
+            product_cb:"3",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -192,18 +218,26 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹10 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"104",
+            product_actprice:"99",
+            product_cb:"10",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
             product_discount:"-11%",
             product_img:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/i/m/img_0337_copy.jpg",
-            product_pname:"Apollo Phrarmacy Compressor Nebulizer,...",
+            product_pname:"Apollo Phrarmacy Compressor Nebu...",
             product_sign:"MRP",
             product_price:"(Rs 1799)",
             product_disprice:"Rs 1588",
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹159 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"1799",
+            product_actprice:"1588",
+            product_cb:"159",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -216,6 +250,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹3 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"32",
+            product_actprice:"25",
+            product_cb:"3",
         },
         { 
             product_disimg:"/samrat-image/discount.jpg",  
@@ -228,6 +266,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹10 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"110",
+            product_actprice:"100",
+            product_cb:"10",
         }]
          
          apollo_data.forEach(function(el){
@@ -294,13 +336,17 @@
             product_disimg:"/samrat-image/discount.jpg",
             product_discount:"-15%",
             product_img:"https://newassets.apollo247.com/pub/media/catalog/product/cache/resized/100x/g/l/glu0036_1.jpg",
-            product_pname:"Glucon-D Regular Instant Energy Drink, 1K..",
+            product_pname:"Glucon-D Regular Instant Energy Drin..",
             product_sign:"MRP",
             product_price:"(Rs 180)",
             product_disprice:"Rs 153",
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹9 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"180",
+            product_actprice:"153",
+            product_cb:"9",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -313,6 +359,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹59 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"1000",
+            product_actprice:"990",
+            product_cb:"59",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -325,6 +375,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹35 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"610",
+            product_actprice:"580",
+            product_cb:"35",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -336,7 +390,11 @@
             product_disprice:"Rs 294.8",
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹9 extra cashback",
-            product_atc:"ADD TO CART", 
+            product_atc:"ADD TO CART",
+            product_quantity:"1", 
+            product_orgprice:"335",
+            product_actprice:294.8,
+            product_cb:9,
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -348,7 +406,11 @@
             product_disprice:"Rs 246.5",
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹9 extra cashback",
-            product_atc:"ADD TO CART",  
+            product_atc:"ADD TO CART",
+            product_quantity:"1", 
+            product_orgprice:"290",
+            product_actprice:"246.5",
+            product_cb:"9", 
         }
     ]
          
@@ -425,6 +487,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹42 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"999",
+            product_actprice:"699.3",
+            product_cb:"42",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -437,6 +503,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹113 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"2345",
+            product_actprice:"1876",
+            product_cb:"113",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -449,6 +519,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹189 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"4499",
+            product_actprice:"3149.3",
+            product_cb:"189",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -461,6 +535,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹20 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"399",
+            product_actprice:"339",
+            product_cb:"20",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -473,6 +551,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹9 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"160",
+            product_actprice:"142.8",
+            product_cb:"9",
         }]
         
         hot_data.forEach(function(el){
@@ -594,6 +676,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹6 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"190",
+            product_actprice:"95",
+            product_cb:"6",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -606,6 +692,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹13 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"250",
+            product_actprice:"125",
+            product_cb:"13",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -618,6 +708,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹10 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"329",
+            product_actprice:"164.5",
+            product_cb:"10",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -630,6 +724,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹6 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"199",
+            product_actprice:"99.5",
+            product_cb:"6",
         },
         {
             product_disimg:"/samrat-image/discount.jpg",
@@ -642,6 +740,10 @@
             product_circle:"/samrat-image/circle.jpg",
             product_cashback:"₹5 extra cashback",
             product_atc:"ADD TO CART",
+            product_quantity:"1",
+            product_orgprice:"140",
+            product_actprice:"130",
+            product_cb:"5",
         }]
  
         HalfPrice.forEach(function(el){
@@ -709,24 +811,11 @@
        function addtocart(el){
            
            atc_prodsdata.push(el)
-           
-          
-             
-             
-          var sam=atc_prodsdata.filter(function(el){
-              return atc_prodsdata[el]!=atc_prodsdata
-          })
-         console.log(sam)
-
-
-
-
-
-            
+                       console.log(atc_prodsdata)
             //    console.log(el)
                localStorage.setItem("addtocart",JSON.stringify(atc_prodsdata));
             // localStorage.setItem("addsamrat",JSON.stringify(samrat))
-               alert("Product Added Sucessfully")
+               alert("Congratulation Your Product has been Added Sucessfully")
             //    console.log(atc_prodsdata)
 
           }
