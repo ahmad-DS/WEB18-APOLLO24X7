@@ -181,20 +181,65 @@ nav {
 /* =====carousel Area===== */
 .carousel {
   width: 100%;
-  /*height: 100%; */
-  /* border: 2px dashed red; */
-  border-radius: 30px;
-  margin: 20px;
-  background-image: url("./index images/landingpage-main-banner.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  height: auto;
+  border: 2px dashed red;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  /* margin: 20px; */
 }
-.carousel_textarea {
+.carousel_container {
+  background-color: green;
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+}
+.carousel_image {
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+}
+.carousel_image > img {
+  width: 100%;
+  height: 100%;
+}
+.previous,
+.next {
+  color: teal;
+  position: absolute;
+  top: 50%;
+  /* padding: 5px; */
+  font-size: 25px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  /* transform: translateY(-50%); */
+}
+.next {
+  right: 20px;
+}
+.radio_button {
+  /* background-color: #fff; */
+  /* padding: 5px; */
+}
+.radio {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid green;
+  /* margin-top: 15px; */
+  padding: 5px;
+}
+/* .carousel_textarea {
   width: 50%;
   margin: 20px;
-  /* border: 3px solid green; */
+  border: 3px solid green;
   padding: 10px 40px;
-  /* position: absolute; */
+  position: absolute;
   bottom: 5px;
 }
 .carousel_textarea > h1 {
@@ -236,7 +281,7 @@ nav {
   color: #02475b;
   font-size: 13px;
   font-weight: 600;
-}
+} */
 /* =====covid_query===== */
 .covid19_queries {
   /* border: 1px dashed red; */
