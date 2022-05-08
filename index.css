@@ -184,7 +184,7 @@ nav {
   /* border: 2px dashed red; */
   border-radius: 5px;
   padding: 20px;
-  /* position: relative; */
+  position: relative;
   /* margin: 20px; */
 }
 .carousel_container {
@@ -210,35 +210,34 @@ nav {
 .previous,
 .next {
   color: teal;
-  /* position: absolute; */
+  position: absolute;
   top: 30%;
-  /* padding: 5px; */
   font-size: 25px;
   border: none;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: #ffffff;
-  /* transform: translateY(-50%); */
 }
 .next {
   right: 20px;
 }
 .radio_button {
-  /* background-color: #fff; */
   padding: 15px 0px 15px 70px;
 }
 .radio {
-  width: 1px;
-  height: 1px;
   border-radius: 50%;
   background-color: grey;
   border: 1px solid rgba(0, 0, 0, 0.501);
   margin-left: 10px;
-  padding: 5px;
+  padding: 1px 11px;
 }
 .radio:hover {
   background-color: black;
+}
+.radio:active {
+  background-color: black;
+  border: 2px solid red;
 }
 /* =====covid_query===== */
 .covid19_queries {
