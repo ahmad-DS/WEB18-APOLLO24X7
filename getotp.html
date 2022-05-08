@@ -89,6 +89,7 @@
 </html>
 <script>
     var otparr=[]
+    
     function checkboxfunctio(){
         var summit= document.querySelector("#submit")
        summit.style.color ="green"
@@ -138,6 +139,8 @@ if(document.querySelector("#number").value ==""){
       }
       otparr.push(obj)
       localStorage.setItem("otpdata",JSON.stringify(otparr))
+      var lastotp =password
+      localStorage.setItem("lastotp",JSON.stringify(lastotp))
       window.location.href="enterotp.html"
    }
     
