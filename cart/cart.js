@@ -116,6 +116,8 @@ displayData(cartItems);
 function displayData(data) {
     document.querySelector("#added_items").innerHTML = "";
     document.querySelector("#total_items").innerText=data.length;
+    document.querySelector("#cart_logo_top").innerText=data.length;
+
     data.forEach(function (element,index) {
         var card = document.createElement("div");
         card.setAttribute("class", "card");
@@ -177,6 +179,9 @@ function displayData(data) {
             
             cartItems.splice(index,1);
             displayData(cartItems);
+            totalSavings();
+            totalAmount();
+            payableAmount()
             // localStorage.set
         })
         del.setAttribute("class","delete")
