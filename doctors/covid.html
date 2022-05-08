@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>covid Doctor list</title>
+    <style>
+      .mainBox {
+        height: 300px;
+        width: auto;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .subBox1 {
+        height: 30%;
+        width: 95%;
+        margin: 10px;
+        display: flex;
+      }
+      .subBox2 {
+        height: 100%;
+        width: 25%;
+      }
+      .subBox2 > img {
+        height: 100%;
+        width: 100%;
+      }
+      .subBox3 {
+        height: 90%;
+        width: 75%;
+        padding-left: 10px;
+      }
+      .subBox3 > p {
+        margin: 5px;
+      }
+      .subBox5 {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+      }
+      .subBox4 {
+        height: auto;
+        width: 50%;
+        margin-left: 10px;
+      }
+      .subBox6 {
+        margin: 10px;
+        display: flex;
+        height: auto;
+      }
+      .subBox6 > img {
+        margin-top: -15px;
+      }
+      img + p {
+        margin: 20px;
+        margin-top: 15px;
+      }
+      .covid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+      strong {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="covid"></div>
+  </body>
+</html>
+
+<script src="doctors.js"></script>

@@ -33,3 +33,12 @@ function showImage(n){
     }
     images[n-1].style.display ="block";
 }
+// =====taking name via prompt function===== //
+var name = prompt("what is your name");
+if (name == "") {
+  name = "There";
+}
+document.querySelector(".heading>h1").innerText = "Hello " + name +"!";
+// name.style.borderBottomWidth = "2px";
+// name.style.borderBottomColor = "green";
+// name.style.borderBottomStyle = "solid";
