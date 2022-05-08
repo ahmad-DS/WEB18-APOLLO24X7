@@ -384,7 +384,7 @@
   }
   .fList > h3 {
     font-size: 15px;
-    color: #090602;
+    color: #ffae45;
     margin-bottom: 30px;
   }
   .fList > h3 > span {
@@ -398,11 +398,13 @@
   .list_flex > li {
     font-size: 18px;
     color: white;
+    background-color: none;
     margin-left: 10px;
   }
   .list_flex > li > a {
     font-size: 15px;
-    color: green;
+    color: white;
+    background-color: #020d11;
     text-decoration: none;
   }
 
