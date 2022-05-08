@@ -17,7 +17,9 @@ nav {
   display: flex;
   justify-content: space-between;
   position: sticky;
+  width: 100%;
   padding: 15px;
+  top: 0px;
   background-color: white;
 }
 #logo > img {
@@ -561,15 +563,17 @@ footer {
   width:300px;
   height: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  position: sticky;
-  left: 50%;
-  top: 25%;
+  position: fixed;
+  left: 51.5%;
+  /* right: 0; */
+  top: 22%;
   transform: translate(50%,-50%) scale(0.1);
   text-align: center;
   visibility: hidden;
   background-color: rgb(226, 238, 238);
   width: 350px;
   height: auto;
+
 }
 .visblecontent{
   visibility: visible;
