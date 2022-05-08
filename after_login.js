@@ -50,7 +50,22 @@ function lasname(signupdetailarr){
     signupdetailarr.forEach(function(el){
         if(el.otp ==lastotp){
             document.getElementById("displayname").innerText="Hello " + el.firstname +"!"
+            document.querySelector("#name").innerText=el.firstname
+            document.querySelector("#mobnumber").innerText=el.number
         }
     })
 }
 
+function showpop(){
+
+        document.querySelector(".popup").classList.add("visblecontent")
+        document.querySelector("#logout").style.cursor="pointer"
+      
+      
+}
+function closearr(){
+    document.querySelector(".popup").classList.remove("visblecontent")
+  }
+  function mianpage(){
+      window.location.href="index.html"
+  }

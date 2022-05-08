@@ -8,6 +8,17 @@
     <title>After-login</title>
   </head>
   <body>
+    <div class="popup">
+      <button class="close" onClick="closearr()">&times;</button>
+      <h1 id="name"></h1>
+      <hr>
+
+      <h3 id="mobnumber"></h3>
+      <hr>
+      <h3 id="payment">My payment</h3>
+      <hr>
+      <h3 id="logout" onclick="mianpage()">Logout</h3>
+    </div>
     <div class="container">
       <!--Ater-login navBar -->
       <nav>
@@ -39,7 +50,7 @@
             /></a>
           </div>
           <div class="user">
-            <a href="#"><img src="./index images/profile-user.png" alt="" /></a>
+           <a onClick="showpop()"><img  src="./index images/profile-user.png" alt=""  /></a>
           </div>
         </div>
       </nav>

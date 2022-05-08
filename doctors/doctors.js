@@ -386,3 +386,7 @@ var dataOfDoctors_paediatrics = [
 }]
 
 localStorage.setItem("Paediatrics", JSON.stringify(dataOfDoctors_paediatrics));
+
+// document.querySelector(".logo").addEventListener("click",function(){
+//   window.location.href="after_login.html"
+// })

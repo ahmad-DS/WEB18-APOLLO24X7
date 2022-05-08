@@ -7,9 +7,10 @@
 </head>
 <style>
 .big{
-    height:100%;
+    height:auto;
     max-width:100%;
     background: #dcdfce;
+    padding-bottom:20px;
 }
 .D1{
     height:620px;
@@ -17,6 +18,7 @@
     background-color:white;
     margin:auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding-bottom:20px;
 }
 
 .D1>h2{
@@ -75,6 +77,7 @@
     background-color: #f0f8ff;
     border-radius:5px;
     margin-bottom:15px;
+    display:flex;
    
     
 }
@@ -84,7 +87,7 @@
     font-size:16px;
 }
 .scnd>h2{
-    margin:17px 0px 0px 20px;
+    margin:14px 0px 0px 20px;
     font-family:sans-serif;
     font-size:16px;
 }
@@ -104,7 +107,7 @@
     font-size:16px;
 }
 .scnd{
-    height:50px;
+    height:45px;
     width:100%;
     border:1px solid grey;
     color: #02475b;
@@ -112,48 +115,54 @@
     font-family: ibm_plex_sanssemibold;
     background-color: #f0f8ff;
     border-radius:5px;
+    margin-bottom:15px;
+    display:flex;
    
 }
 .thrd{
-    height:50px;
+    
+    height:45px;
     width:100%;
     border:1px solid grey;
     color: #02475b;
     font-size: 14px;
     font-family: ibm_plex_sanssemibold;
-    margin-top:15px;
     background-color: #f0f8ff;
     border-radius:5px;
-   
+    margin-bottom:15px;
+    display:flex;
 }
 
 .frth{
-    height:50px;
+    height:45px;
     width:100%;
     border:1px solid grey;
     color: #02475b;
     font-size: 14px;
     font-family: ibm_plex_sanssemibold;
-    margin-top:15px;
     background-color: #f0f8ff;
     border-radius:5px;
+    margin-bottom:15px;
+    display:flex;
    
 }
 .fifh{
-    height:50px;
+   
+    height:45px;
     width:100%;
     border:1px solid grey;
     color: #02475b;
     font-size: 14px;
     font-family: ibm_plex_sanssemibold;
-    margin-top:15px;
     background-color: #f0f8ff;
     border-radius:5px;
-   
+    margin-bottom:15px;
+    display:flex;
     
     
 }
 .double{
+    
     margin-top:-8px;
     height:auto;
     width:90%;
@@ -164,6 +173,7 @@
 }
 .double>h2{
     color: #02475b;
+   
     
     font-size: 14px;
     font-family: ibm_plex_sansmedium;
@@ -349,6 +359,41 @@ nav{
     width:96%;
 
 }
+.b1{
+    margin-left:50px;
+}
+.frst>img{
+    height:20px;
+    width:40px;
+}
+a{
+    text-decoration: none;
+    color:#02475b;
+    font-family:sans-serif;
+    margin:0px 0px 0px 20px;
+    
+    font-size:10px;
+
+}
+.subtotal{
+    margin-left:70px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #02475b;
+}
+.topay{
+    margin-left:90px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #02475b;
+ 
+}
+
+
+
+
 
 
 
@@ -377,17 +422,11 @@ nav{
         <div class="D2">
             <div class="m2">
                 <div class="divs">
-                    <div class="frst">
-                        <h2>DEBIT/CREDIT CARD </h2>
-                        <div></div>
-                        </div>
-                    <div class="scnd">
-                        <h2>UPI
-                            </h2>
-                        </div>
-                    <div class="thrd"><h2>WALLETS </h2></div>
-                    <div class="frth"> <h2>PAY ON DELIVERY </h2></div>
-                    <div class="fifh"> <h2>NETBANKING </h2></div>
+                    <div class="frst"><a href="Input1.html"> <h2>DEBIT/CREDIT CARD </h2></a></div>
+                    <div class="scnd"><a href="input2.html"><h2>UPI</h2></a></div>
+                    <div class="thrd"><a href="input3.html"><h2>WALLETS </h2></a></div>
+                    <div class="frth"> <a href="input4.html"><h2>PAY ON DELIVERY </h2></a></div>
+                    <!-- <div class="fifh"> <a href="input5.html"><h2>NETBANKING </h2></a></div> -->
                     </div>
 
                     <div class="s1">
@@ -411,10 +450,12 @@ nav{
             <div class="m3">
                 <div>TOTAL CHARGES</div>
                 <div class="double">
-                    <h2>SubTotal</h2>
+                    <h2>SubTotal <span class="subtotal"></span></h2>
                     <hr>
-                    <h2>To Pay</h2>
+                    <h2>To Pay <span class="topay subtotal"></span></h2></h2>
                 </div>
+               
+                
                 <div class="fuble">
                     <div class="p1">
                         <img src="https://newassets.apollo247.com/images/ic_offers.svg" alt="">
@@ -459,3 +500,10 @@ nav{
                 
 </body>
 </html>
+<script>
+    var subtotal=localStorage.getItem("subtotal");
+    var arr=document.querySelectorAll(".subtotal");
+    for (var i=0;i<arr.length;i++){
+        arr[i].innerText="RS."+(+subtotal).toFixed(2);
+    }
+</script>

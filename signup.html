@@ -1,138 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
     <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #02475b;
-        }
-        #parent{
-            background-color: azure;
-            height: auto;
-            width: 400px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            padding:10px 20px;
-        }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #02475b;
+      }
+      #parent {
+        background-color: azure;
+        height: auto;
+        width: 400px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 10px 20px;
+      }
 
-       h1 {
-            color: #02475b; 
-            font-size: 36px;
-            font-family: IBM Plex Sans,sans-serif;
-            font-weight: 600;
-            line-height: 1.2;
-                            }
-        p{
-            color: #0087ba;
-            font-size: 17px;
-            margin-top: 20px;
-            font-weight: 500;
-            line-height: 1.41;
-            display: inline;
-            
-                             }
-         label{
-            color: #02475b;
-            font-size: 12px;
-            font-weight: 500;
-        }
-        input{
-            
-           width: 100%;
-           height: 30px;
-            margin: 5px 0px;
-        }
-        
-       
-        #summit{
-            background-color: #fed984;
-            border: 0px;
-            height: 40px;
-            position: sticky;
-            border-radius: 10px;
-        } 
-        #checkbox{
-             margin-right: 500px;
-        } 
-                     
+      h1 {
+        color: #02475b;
+        font-size: 36px;
+        font-family: IBM Plex Sans, sans-serif;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      p {
+        color: #0087ba;
+        font-size: 17px;
+        margin-top: 20px;
+        font-weight: 500;
+        line-height: 1.41;
+        display: inline;
+      }
+      label {
+        color: #02475b;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        margin: 5px 0px;
+      }
 
+      #summit {
+        background-color: #fed984;
+        border: 0px;
+        height: 40px;
+        position: sticky;
+        border-radius: 10px;
+      }
+      #checkbox {
+        margin-right: 500px;
+      }
     </style>
-</head>
-<body>
-      <div id="parent">
-          <h1>
-Welcome to apollo 24|7
-          </h1>
-          <p>Enter your details. Let us quickly get to know you so that we can get you the best help :)</p>
-          <form id="form">
-              <label for="username"> FULL NAME</label>
-              <br>
-              <input type="text" id="firstname" placeholder="FIRST NAME">
-              <br>
-              <input type="text" id="lastname" placeholder="LAST NAME">
-              <br>
-            <label for="dob"> DATE OF BIRTH</label>
-            <br>
-            <input type="text" id="dob" placeholder="dd/mm/yyyy" required minlength="10" maxlength="10">
-            <br>
-            <label for="buttom"> GENDER</label>
-            <select  id="gender">
-                <option value=""> --/--</option>
-                <option > MALE</option>
-                <option > FEMALE</option>
-            </select>
-            <br>
-            <label for="email">Email Address (Optional)
-            </label>
-            <br>
-            <input type="email" id="email" placeholder="name@email.com">
-            <br>
-            
-            <p>send me personalised health tips & offers on Whatsapp </p>
-            <input type="checkbox" id="checkbox" onClick="checkboxfunction()">
-            <input type="submit" id="summit" >
-          </form>
-      </div>
-</body>
+  </head>
+  <body>
+    <div id="parent">
+      <h1>Welcome to apollo 24|7</h1>
+      <p>
+        Enter your details. Let us quickly get to know you so that we can get
+        you the best help :)
+      </p>
+      <form id="form">
+        <label for="username"> FULL NAME</label>
+        <br />
+        <input type="text" id="firstname" placeholder="FIRST NAME" />
+        <br />
+        <input type="text" id="lastname" placeholder="LAST NAME" />
+        <br />
+        <label for="dob"> DATE OF BIRTH</label>
+        <br />
+        <input
+          type="text"
+          id="dob"
+          placeholder="dd/mm/yyyy"
+          required
+          minlength="10"
+          maxlength="10"
+        />
+        <br />
+        <label for="buttom"> GENDER</label>
+        <select id="gender">
+          <option value="">--/--</option>
+          <option>MALE</option>
+          <option>FEMALE</option>
+        </select>
+        <br />
+        <label for="email">Email Address (Optional) </label>
+        <br />
+        <input type="email" id="email" placeholder="name@email.com" />
+        <br />
+
+        <p>send me personalised health tips & offers on Whatsapp</p>
+        <input type="checkbox" id="checkbox" onClick="checkboxfunction()" />
+        <input type="submit" id="summit" />
+      </form>
+    </div>
+  </body>
 </html>
 <script>
-    var signupdetailarr=JSON.parse(localStorage.getItem("signupdetaildata"))||[]
-    var mobilenumberdata =JSON.parse(localStorage.getItem("otpdata"))
-    var mobilenumber =mobilenumberdata[0].mobilenumber
-    var password =mobilenumberdata[0].otp
-    
-    function checkboxfunction(){
-        if(form.firstname.value!="" &&form.lastname.value!=""&&form.dob.value!=""&&form.gender.value!="" ){
-            var summit =document.getElementById("summit")
-            summit.style.backgroundColor="orange"
-            form.addEventListener("submit",function(){
-                event.preventDefault()
-                 
-               var obj={
-                  firstname:form.firstname.value,
-                  lastname:form.lastname.value,
-                  age: form.dob.value,
-                  gender:form.gender.value,
-                  number:mobilenumber,
-                  otp:password
-               }
-               signupdetailarr.push(obj)
-               localStorage.setItem("signupdetaildata",JSON.stringify(signupdetailarr))
-               window.location.href="after_login.html"
-               
-            })
-               
-               
-        }
-        else{
-            alert("Please fill all requirement")
-        }
+  var signupdetailarr =
+    JSON.parse(localStorage.getItem("signupdetaildata")) || [];
+  var mobilenumberdata = JSON.parse(localStorage.getItem("otpdata"));
+  var mobilenumber = mobilenumberdata[0].mobilenumber;
+  var password = mobilenumberdata[0].otp;
+
+  function checkboxfunction() {
+    if (
+      form.firstname.value != "" &&
+      form.lastname.value != "" &&
+      form.dob.value != "" &&
+      form.gender.value != ""
+    ) {
+      var summit = document.getElementById("summit");
+      summit.style.backgroundColor = "orange";
+      form.addEventListener("submit", function () {
+        event.preventDefault();
+
+        var obj = {
+          firstname: form.firstname.value,
+          lastname: form.lastname.value,
+          age: form.dob.value,
+          gender: form.gender.value,
+          number: mobilenumber,
+          otp: password,
+        };
+        signupdetailarr.push(obj);
+        localStorage.setItem(
+          "signupdetaildata",
+          JSON.stringify(signupdetailarr)
+        );
+        window.location.href = "after_login.html";
+      });
+    } else {
+      alert("Please fill all requirement");
     }
-     
-    
+  }
 </script>

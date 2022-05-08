@@ -91,7 +91,7 @@ function displayData(data) {
         // var n = ((+element.price - element.sellingPrice) * 100 / +element.price).toFixed(2);
         var n=element.product_discount;
         var span1 = document.createElement("span");
-        span1.innerText = n + "% off ";
+        span1.innerText = n + " off ";
         span1.style.color = '#00B38E';
         span1.style.marginRight = "5px";
         var span2 = document.createElement("span");
@@ -188,7 +188,7 @@ document.querySelector(".logo").addEventListener("click",function(){
 
 // adding event lstener to go to payment button;
 document.querySelector("#address_btn").addEventListener("click",function(){
-    window.location.href="../payment.html"
+    window.location.href="../SHIVANI-THAKUR/payment.html"
 })
 
 
