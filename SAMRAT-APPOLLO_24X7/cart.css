@@ -58,20 +58,7 @@ nav {
     color: #02475b;
     font-size: 12px;
 }
-.cart_logo{
-    position:relative;
-}
-#cart_logo_top{
-    position:absolute;
-    text-align: center;
-    width:20px;
-    height:20px;
-    color:white;
-    background-color: red;
-    border-radius: 50%;
-    top:-10px;
-    left:15px;
-}
+
 /* .cart_logo {
     margin-right: 20px;
     padding-top: 25px;
@@ -91,8 +78,7 @@ nav {
 } */
 .material-symbols-outlined{
     font-size: 40px;
-    color:aqua;
-    /* background-color: black; */
+    background-color: black;
 }
 
 
@@ -281,12 +267,6 @@ nav {
 }
 
 .delete:hover {
-    /* border: 1px solid red; */
-    border-radius: 2px;
-    padding:1px;
-    background-color:red;
+    border: 1px solid red;
     cursor: pointer;
-}
-#dc{
-    text-decoration: line-through;
 }

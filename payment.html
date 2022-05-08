@@ -1,0 +1,460 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<style>
+.big{
+    height:100%;
+    max-width:100%;
+    background: #dcdfce;
+}
+.D1{
+    height:620px;
+    width:70%;
+    background-color:white;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.D1>h2{
+    font-family:ibm_plex_sanssemibold;
+    font-size: 18px;
+    line-height: 24px;
+   
+    color: #02475b;
+    /* */
+}
+.D1>hr{
+    width:98%;
+    margin-left:10px;
+}
+.D2{
+    height:auto;
+    width:96%;
+    
+    display:flex;
+    margin:10px 0px 0px 7px;
+    
+}
+.m2{
+    height:auto;
+    width:65%;
+  
+}
+.m3{
+    height:500pxauto;
+    width:35%;
+   
+    margin-left:20px;
+}
+.m3>div{
+    color: #02475b;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin:20px 0px 0px 20px;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+
+.divs{
+    height:auto;
+    width:100%;
+   
+}
+
+.frst{
+    height:45px;
+    width:100%;
+    border:1px solid grey;
+    color: #02475b;
+    font-size: 14px;
+    font-family: ibm_plex_sanssemibold;
+    background-color: #f0f8ff;
+    border-radius:5px;
+    margin-bottom:15px;
+   
+    
+}
+.frst>h2{
+    margin:14px 0px 0px 20px;
+    font-family:sans-serif;
+    font-size:16px;
+}
+.scnd>h2{
+    margin:17px 0px 0px 20px;
+    font-family:sans-serif;
+    font-size:16px;
+}
+.thrd>h2{
+    margin:17px 0px 0px 20px;
+    font-family:sans-serif;
+    font-size:16px;
+}
+.frth>h2{
+    margin:17px 0px 0px 20px;
+    font-family:sans-serif;
+    font-size:16px;
+}
+.fifh>h2{
+    margin:17px 0px 0px 20px;
+    font-family:sans-serif;
+    font-size:16px;
+}
+.scnd{
+    height:50px;
+    width:100%;
+    border:1px solid grey;
+    color: #02475b;
+    font-size: 14px;
+    font-family: ibm_plex_sanssemibold;
+    background-color: #f0f8ff;
+    border-radius:5px;
+   
+}
+.thrd{
+    height:50px;
+    width:100%;
+    border:1px solid grey;
+    color: #02475b;
+    font-size: 14px;
+    font-family: ibm_plex_sanssemibold;
+    margin-top:15px;
+    background-color: #f0f8ff;
+    border-radius:5px;
+   
+}
+
+.frth{
+    height:50px;
+    width:100%;
+    border:1px solid grey;
+    color: #02475b;
+    font-size: 14px;
+    font-family: ibm_plex_sanssemibold;
+    margin-top:15px;
+    background-color: #f0f8ff;
+    border-radius:5px;
+   
+}
+.fifh{
+    height:50px;
+    width:100%;
+    border:1px solid grey;
+    color: #02475b;
+    font-size: 14px;
+    font-family: ibm_plex_sanssemibold;
+    margin-top:15px;
+    background-color: #f0f8ff;
+    border-radius:5px;
+   
+    
+    
+}
+.double{
+    margin-top:-8px;
+    height:auto;
+    width:90%;
+    border:1px solid grey;
+    border-radius:5px;
+    
+    
+}
+.double>h2{
+    color: #02475b;
+    
+    font-size: 14px;
+    font-family: ibm_plex_sansmedium;
+    margin-left:20px;
+   
+}
+.double>hr{
+    width:97%;
+}
+.fuble{
+    display:flex;
+}
+.p2>h3{
+    color: #02475b;
+    margin-top:-5px;
+    margin-left:6px;
+    font-family: ibm_plex_sanssemibold;
+    font-size: 14px;
+    margin-bottom:-35px;
+}
+.juggle{
+    height:auto;
+    width:90%;
+    border:1px solid grey;
+   margin-top:15px;
+   border-radius:5px;
+}
+.v1{
+    display:flex;
+}
+.v1>img{
+    height:20px;
+    width:25px;
+    margin-left:15px;
+    margin-top:10px;
+    /* margin-top:15px; */
+}
+.v3>h5{
+    color: #02475b;
+    font-family: ibm_plex_sanssemibold;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left:9px;
+    
+}
+.v4>p{
+    
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #02475b;
+    font-family:sans-serif;
+    margin:-15px 0px 0px 25px;
+}
+.v1>hr{
+    width:96%;
+}
+.v5>p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: orange;
+    font-family:sans-serif;
+    margin:10px 0px 0px 25px;
+}
+.j1{
+    height:40px;
+    width:100%;
+   
+}
+.j2{
+    display:flex;
+}
+.s1{
+    height:100px;
+    width:100%;
+    
+}
+.j1>p{
+    margin-top:30px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #02475b;
+    font-family:sans-serif;
+    text-align:center;
+    
+}
+.j2{
+    height:60px;
+    width:100%;
+    
+}
+.j2>p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #02475b;
+    font-family:sans-serif;
+    margin-left:220px;
+    margin-top:-7px;
+    
+}
+.a1>img{
+    height:30px;
+    width:60px;
+    margin-left:4px;
+    margin-top:-11px;
+
+}
+.a2>img{
+    height:33px;
+    width:66px;
+    
+    margin-top:-11px;
+     
+    
+}
+.z1{
+    height:40px;
+    width:100%;
+   
+}
+.z1>h2{
+    color: #02475b;
+    margin-top:-5px;
+    margin-left:15px;
+    margin-top:15px;
+    font-family:sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    /* margin-bottom:-35px; */
+}
+.z1>hr{
+    width:98%;
+    margin-top:10px;
+    color: #02475b;
+    
+}
+nav{
+    height:92px;
+    position: sticky;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.header> img {
+  width: 100px;
+  height: 70px;
+  padding: 9px 20px;
+  margin:0px 0px 0px -15px;
+}
+.navs{
+    margin-left:-10px;
+    height:96%;
+    width:170px;
+    
+   
+}
+.navs>p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #02475b;
+    font-family:sans-serif;
+    margin-top:30px;
+}
+.navs>h6{
+    margin-top:-10px;
+    font-size:15px;
+    color: #02475b;
+    font-family:sans-serif;
+}
+.navs>hr{
+    margin-top:-30px;
+    color: #02475b;
+    width:96%;
+
+}
+
+
+
+
+</style>
+<body>
+    <div class="big">
+        <div class="D1">
+        <nav>
+           
+            <div class="header">
+              <img src="https://newassets.apollo247.com/images/pharmacy_logo.svg" alt="">
+            </div>
+            <div class="navs">
+                <p>Deliver to Shivani</p>
+                <h6>Select your location</h6>
+                <hr>
+            </div>
+          
+        </nav>
+        <div class="z1">
+        <h2>Payment</h2>
+        <hr>
+        </div>
+
+        <div class="D2">
+            <div class="m2">
+                <div class="divs">
+                    <div class="frst">
+                        <h2>DEBIT/CREDIT CARD </h2>
+                        </div>
+                    <div class="scnd">
+                        <h2>UPI
+                            </h2>
+                        </div>
+                    <div class="thrd"><h2>WALLETS </h2></div>
+                    <div class="frth"> <h2>PAY ON DELIVERY </h2></div>
+                    <div class="fifh"> <h2>NETBANKING </h2></div>
+                    </div>
+
+                    <div class="s1">
+                        <div class="j1">
+                            <p>100% Secured Payments</p>
+                        </div>
+                        <div class="j2">
+                            <p>Powered By</p>
+                            <div class="a1">
+                                <img src="https://newassets.apollo247.com/images/payments/paytm.png" alt="">
+                             </div>
+                          
+                             <div class="a2">
+                            <img src="https://newassets.apollo247.com/images/payments/ic-payU.svg" alt="">
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+            
+            <div class="m3">
+                <div>TOTAL CHARGES</div>
+                <div class="double">
+                    <h2>SubTotal</h2>
+                    <hr>
+                    <h2>To Pay</h2>
+                </div>
+                <div class="fuble">
+                    <div class="p1">
+                        <img src="https://newassets.apollo247.com/images/ic_offers.svg" alt="">
+                    </div>
+                    <div class="p2"><h3>BANK OFFERS</h3></div>
+                </div>
+
+                <div class="juggle">
+                    <div class="v1">
+                        <img src="https://newassets.apollo247.com/images/payment_offer_icons/PAYTM.png" alt="">
+
+                        <div class="v3">
+                    <h5>Assured cashback of ₹30 to ₹300 on Paytm wallet & postpaid</h5>
+                    </div>
+
+                    </div>
+                    <div class="v4">
+                    <p>Get assured cashback of ₹30 to ₹300 on transaction above ₹899</p>
+                    </div>
+                    <div class="v5">
+
+                    <p>T&C Apply</p>
+                    <hr>
+                    </div>
+                    <div class="v1">
+                        <img src="https://newassets.apollo247.com/images/payment_offer_icons/MERCHANT.png" alt="">
+
+                        <div class="v3">
+                        <h5>15% instant off on using Postpe Card</h5>
+                        </div>
+                    </div>
+
+                    <div class="v4">
+                    <p>15% instant off upto ₹200 on txn above ₹999</p>
+                    </div>
+
+                    <div class="v5">
+                    <p>T&C Apply</p>
+                    </div>
+                </div>
+                </div>
+                
+</body>
+</html>
