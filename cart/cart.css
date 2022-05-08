@@ -16,6 +16,10 @@ nav {
     /* margin-bottom: 2px; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.logo:hover{
+    cursor:pointer;
+
+}
 
 .logo>img {
     width: 100px;

@@ -7,109 +7,9 @@
 //     })
 // }
 // 
-// var cartItems=JSON.parse(localStorage.getItem("addtocart"))||[];
-var cartItems = [
-    {
-        "id": 4791,
-        "sku": "SEB0020",
-        "price": 476,
-        "special_price": 418,
-        "name": "Sebamed Clear Face Care Gel, 50 ml",
-        "status": 1,
-        "type_id": "FMCG",
-        "url_key": "sebamed-clear-face-care-gel-50-ml",
-        "is_in_stock": 1,
-        "MaxOrderQty": 10,
-        "sell_online": true,
-        "subcategory": null,
-        "image": "/catalog/product/s/e/seb0020.jpg",
-        "small_image": "/catalog/product/s/e/seb0020.jpg",
-        "thumbnail": "/catalog/product/cache/resized/100x/s/e/seb0020.jpg",
-        "is_prescription_required": "0",
-        "mou": "1",
-        "dc_availability": "Yes",
-        "is_express": "No",
-        "is_in_contract": "Yes",
-        "quantity": 1,
-        "isShippable": true,
-        "sellingPrice": 418
-    },
-    {
-        "id": 61532,
-        "sku": "SEB0100",
-        "price": 666,
-        "special_price": 587,
-        "name": "Sebamed Baby Powder, 200 gm",
-        "status": 1,
-        "type_id": "FMCG",
-        "url_key": "sebamed-baby-powder-200g",
-        "is_in_stock": 1,
-        "MaxOrderQty": 10,
-        "sell_online": true,
-        "subcategory": null,
-        "image": "/catalog/product/s/e/seb0100.jpg",
-        "small_image": "/catalog/product/s/e/seb0100.jpg",
-        "thumbnail": "/catalog/product/cache/resized/100x/s/e/seb0100.jpg",
-        "is_prescription_required": "0",
-        "mou": "1",
-        "dc_availability": "Yes",
-        "is_express": "No",
-        "is_in_contract": "Yes",
-        "quantity": 1,
-        "isShippable": true,
-        "sellingPrice": 587
-    },
-    {
-        "id": 61533,
-        "sku": "SEB0115",
-        "price": 650,
-        "special_price": 530,
-        "name": "Sebamed Anti-Hairloss Shampoo, 200 ml",
-        "status": 1,
-        "type_id": "FMCG",
-        "url_key": "seba-med-anti-hairloss-shampoo-200ml",
-        "is_in_stock": 1,
-        "MaxOrderQty": 10,
-        "sell_online": true,
-        "subcategory": null,
-        "image": "/catalog/product/s/e/seb0115.jpg",
-        "small_image": "/catalog/product/s/e/seb0115.jpg",
-        "thumbnail": "/catalog/product/cache/resized/100x/s/e/seb0115.jpg",
-        "is_prescription_required": "0",
-        "mou": "1",
-        "dc_availability": "Yes",
-        "is_express": "No",
-        "is_in_contract": "Yes",
-        "quantity": 1,
-        "isShippable": true,
-        "sellingPrice": 530
-    },
-    {
-        "id": 87349,
-        "sku": "SEB0069",
-        "price": 1337,
-        "special_price": 668.5,
-        "name": "Sebamed Baby Sun Care SPF 50+ Multi Protect Sun Lotion, 200 ml",
-        "status": 1,
-        "type_id": "FMCG",
-        "url_key": "sebamed-sun-lotion-50-150ml",
-        "is_in_stock": 1,
-        "MaxOrderQty": 20,
-        "sell_online": true,
-        "subcategory": null,
-        "image": "/catalog/product/m/a/main_31566907052.jpg",
-        "small_image": "/catalog/product/m/a/main_31566907052.jpg",
-        "thumbnail": "/catalog/product/cache/resized/100x/m/a/main_31566907052.jpg",
-        "is_prescription_required": "0",
-        "mou": "1",
-        "dc_availability": "Yes",
-        "is_express": "No",
-        "is_in_contract": "Yes",
-        "quantity": 1,
-        "isShippable": true,
-        "sellingPrice": 668.5
-    }
-]
+var cartItems=JSON.parse(localStorage.getItem("addtocart"))||[];
+
+
 // var selected = 1;
 displayData(cartItems);
 
@@ -128,7 +28,7 @@ function displayData(data) {
         var leftdiv1 = document.createElement("div");
         var thumbnail = document.createElement("img");
        
-        thumbnail.setAttribute("src", "https://newassets.apollo247.com/pub/media" + element.small_image);
+        thumbnail.setAttribute("src", element.product_img);
         thumbnail.style.width = "50px";
         thumbnail.style.height = "50px";
         // console.log(thumbnail);
@@ -138,9 +38,9 @@ function displayData(data) {
 
         var leftdiv2 = document.createElement("div");
         var h4 = document.createElement("h4");
-        h4.innerText = element.name;
+        h4.innerText = element.product_pname;
         var p1 = document.createElement("p");
-        p1.innerText = "(quantity added " + element.quantity + ")"
+        p1.innerText = "(quantity added " + element.product_quantity + ")"
 
 
         var inner_div = document.createElement("div");
@@ -178,6 +78,7 @@ function displayData(data) {
         del.addEventListener("click",function(){
             
             cartItems.splice(index,1);
+            localStorage.setItem("addtocart",JSON.stringify(cartItems))
             displayData(cartItems);
             totalSavings();
             totalAmount();
@@ -187,7 +88,8 @@ function displayData(data) {
         del.setAttribute("class","delete")
         del.setAttribute("src", "https://newassets.apollo247.com/images/ic_delete.svg");
         var p3 = document.createElement("p");
-        var n = ((+element.price - element.sellingPrice) * 100 / +element.price).toFixed(2);
+        // var n = ((+element.price - element.sellingPrice) * 100 / +element.price).toFixed(2);
+        var n=element.product_discount;
         var span1 = document.createElement("span");
         span1.innerText = n + "% off ";
         span1.style.color = '#00B38E';
@@ -195,7 +97,7 @@ function displayData(data) {
         var span2 = document.createElement("span");
         span2.setAttribute("class", "oldPrice")
         // ***
-        span2.innerText = " ₹ " + (element.price * element.quantity).toFixed(2);
+        span2.innerText = " ₹ " + (+element.product_orgprice*element.product_quantity).toFixed(2);
         span2.style.textDecoration = "line-through";
 
         p3.append(span1, span2);
@@ -203,10 +105,10 @@ function displayData(data) {
         h3.setAttribute('class', 'currentPrice')
         h3.style.color = "#01475b"
         // ***
-        h3.innerText = "₹" + (element.sellingPrice * element.quantity).toFixed(2);
+        h3.innerText = "₹" + (element.product_actprice*element.product_quantity).toFixed(2);
         var p4 = document.createElement("p");
         // ****
-        p4.innerText = "savings ₹" + ((+element.price - element.sellingPrice) * element.quantity).toFixed(2);
+        p4.innerText = "savings ₹" + ((+element.product_orgprice- element.product_actprice) * element.product_quantity).toFixed(2);
         right.append(del, p3, h3, p4)
         // var numItems=document.createElement("select");
         // var option1=document.createElement("select");
@@ -214,6 +116,7 @@ function displayData(data) {
             console.log(h3);
             h3.innerText = "Shakil";
             changeQuantity(element)
+            localStorage.setItem("addtocart",JSON.stringify(cartItems))
         });
 
         card.append(left, right);
@@ -229,7 +132,7 @@ function displayData(data) {
 totalSavings();
 function totalSavings(){
 var savings = cartItems.reduce(function (sum, element) {
-    return sum + (+element.price - element.sellingPrice) * element.quantity;
+    return sum + (+element.product_orgprice - element.product_actprice) * element.product_quantity;
 }, 0);
 console.log(savings);
 
@@ -239,7 +142,7 @@ document.getElementById("saving_amount").innerText = "₹" + savings.toFixed(2);
 totalAmount();
 function totalAmount(){
 var total_amount = cartItems.reduce(function (sum, element) {
-    return sum + (+element.sellingPrice)*element.quantity
+    return sum + (+element.product_actprice)*element.product_quantity
 }, 0);
 console.log(total_amount);
 
@@ -251,11 +154,12 @@ payableAmount()
 function payableAmount(){
     var dc=document.querySelector("#dc").innerText;
     var total_amount = cartItems.reduce(function (sum, element) {
-        return sum + (+element.sellingPrice)*element.quantity
+        return sum + (+element.product_actprice)*element.product_quantity
     }, 0);
     console.log(typeof(dc),typeof(total_amount))
     var toPay=total_amount-dc;
     document.querySelector("#payable_amount").innerText="₹"+toPay;
+    localStorage.setItem("subtotal",toPay);
 
 }
 
@@ -266,7 +170,7 @@ function changeQuantity(element) {
     var qty = event.target.value;
 
     console.log(element)
-    element.quantity = qty;
+    element.product_quantity = qty;
 
     selected = qty
     displayData(cartItems);
@@ -276,3 +180,17 @@ function changeQuantity(element) {
     
 
 }
+
+// adding event listener to logo image of company;
+document.querySelector(".logo").addEventListener("click",function(){
+    window.location.href="../after_login.html"
+})
+
+// adding event lstener to go to payment button;
+document.querySelector("#address_btn").addEventListener("click",function(){
+    window.location.href="../payment.html"
+})
+
+
+// var payable_amount=localStorage.setItem("subtotal",payable_amount);
+// localStorage
