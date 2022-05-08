@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="cart.css">
+    <title>Cart</title>
+
+    <style>
+        body {
+            /* background-color:#ccc ; */
+            background-color: #dcdfce;
+
+        }
+
+        #top {
+            background-color: #d0d1cc;
+            width: 85%;
+            height: auto;
+            margin: auto;
+            padding-top: 30px;
+            padding-bottom: 100px;
+        }
+
+        #top>h4 {
+            margin-left: 1.5%;
+        }
+
+        #main {
+
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #items {
+            width: 65%;
+            height: 100;
+            border: 1px red solid;
+
+        }
+
+        #items>div:first-child {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid grey;
+        }
+
+        #delivery {
+            width: 30%;
+            height: 100%;
+            background-color: white;
+            border: 1px red solid;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+
+        #delivery>div:nth-child(1) {
+            display: flex;
+            border-bottom: 1px solid grey;
+        }
+
+        #delivery>div:nth-child(2) {
+            background-color: #e1e3de;
+            margin: 20px 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+
+        }
+
+        #address_btn {
+            display: block;
+            margin: auto;
+            width: 95%;
+            padding: 12px 0;
+            border-radius: 10px;
+            border: 0;
+            color: white;
+            font-weight: bold;
+            background-color: orange;
+        }
+
+        #delivery>div:nth-child(3) {
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 15px 0;
+        }
+
+        #delivery>div:nth-child(3)>div {
+            margin: 5px 0 0 25px;
+
+            font-size: smaller;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        #delivery>div:nth-child(4) {
+            margin-top: 25px;
+            border-bottom: 1px solid grey;
+        }
+
+        #delivery>div:nth-child(5) {
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin: 20px 0;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+
+        #delivery>div:nth-child(5)>div {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+
+        .border_bottom {
+            border-bottom: 1px solid grey;
+            padding-bottom: 5px;
+        }
+
+        #total {
+            font-size: larger;
+        }
+
+        #delivery>div:nth-child(6) {
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            font-size: smaller;
+            text-align: center;
+            font-weight: 200;
+            padding: 15px 0;
+        }
+
+        .card {
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+
+        #savings {
+            text-align: center;
+            background-color: white;
+            padding: 10px;
+            margin: 15px 0 20px 0;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            /* text-decoration: underline green dashed 1px; */
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="logo">
+            <img src="https://newassets.apollo247.com/images/ic_logo.png" alt="logo" />
+        </div>
+        <div class="content">
+            <div class="text">
+                <a href="doctors.html">
+                    <p class="first">DOCTOR</p>
+                </a>
+                <a href="#">
+                    <p class="second">Consult Online</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="###">
+                    <p class="first">PHARMACY</p>
+                </a>
+                <a href="###">
+                    <p class="second">Medicines & other products</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="#">
+                    <p class="first">LAB TEST</p>
+                </a>
+                <a href="#">
+                    <p class="second">Health check-ups</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="#">
+                    <p class="first">COVID_19</p>
+                </a>
+                <a href="#">
+                    <p class="second">Latest updates</p>
+                </a>
+            </div>
+            <div class="cart_logo">
+                <a href="#"><span class="material-symbols-outlined">
+                    shopping_cart
+                    </span></a>
+
+            </div>
+            <div class="user_logo">
+                <a href="getotp.html"><span class="material-symbols-outlined">
+                    account_circle
+                    </span></a>
+
+            </div>
+        </div>
+    </nav>
+  
+
+    <div id="top">
+        <h4>MY CART</h4>
+        <div id="main">
+
+            <div id="items">
+
+                <div>
+                    <h4>ITEM(S) IN YOUR CART (<span id="total_items"></span>)</h4>
+                    <h4>ADD ITEMS</h4>
+                </div>
+                <!-- <hr> -->
+                <!--  items added in the cart  -->
+                <div id="added_items">
+                    <!-- <div class="card">
+                        <div></div>
+                        <div></div>
+                    </div class="card">
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card">
+                        <div></div>
+                        <div></div>
+                    </div> -->
+
+                </div>
+                <div id="savings">
+                    <p>Total Saving: <span id="saving_amount"></span></p>
+                </div>
+                <div class="border_bottom">
+                    CIRCLE MEMBERSHIP (OPTIONAL)
+
+                </div>
+                <div id="membership">
+                    <div>
+                        <img src="https://newassets.apollo247.com/images/circle.png" alt="">
+                        <p>We have enabled Circle membership to give you the best discounts</p>
+                    </div>
+                    <div>
+                        <div class="offer">
+                            <img src="img1.jpg" alt="">
+                            <div><img src="https://newassets.apollo247.com/images/ic_radio_unselected.svg" alt=""></div>
+                        </div>
+                        <div class="offer">
+                            <img src="img2.jpg" alt="">
+                            <div><img src="https://newassets.apollo247.com/images/ic_radio_unselected.svg" alt=""></div>
+                        </div>
+                        <div class="offer">
+                            <img src="img3.jpg" alt="">
+                            <div><img src="https://newassets.apollo247.com/images/ic_radio_unselected.svg" alt=""></div>
+                        </div>
+                    </div>
+                    <div id="ticks">
+                        <div>
+                            <img src="https://newassets.apollo247.com/images/ic_check.svg">
+                            <span>Instant cashback</span> of ₹169.08 on this order
+
+
+                        </div>
+                        <div>
+                            <img src="https://newassets.apollo247.com/images/ic_check.svg">
+                            <span>Free delivery</span> on every order
+
+                        </div>
+                    </div>
+                    <div>
+                        <p>KNOW MORE</p>
+
+                    </div>
+                </div>
+                <div class="border_bottom">
+                    PEOPLE ALSO BOUGHT
+
+                </div>
+                <div id="popular">
+                    <div>
+                        <img src="https://newassets.apollo247.com/pub/media/catalog/product/l/i/lim0003.jpg" alt="">
+                        <p class="a">Apollo Life Glucose-D Instant Energy Drink,.....</p>
+                        <h3>MRP RS.100</h3>
+                        <img src="https://newassets.apollo247.com/images/circle.png" alt="">
+                        <span class="a">₹ 10 extra cashback</span>
+
+
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/pub/media/catalog/product/l/i/lim0003.jpg" alt="">
+                        <p class="a">Apollo Life Glucose-D Instant Energy Drink,.....</p>
+                        <h3>MRP RS.100</h3>
+                        <img src="https://newassets.apollo247.com/images/circle.png" alt="">
+                        <span class="a">₹ 10 extra cashback</span>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/pub/media/catalog/product/l/i/lim0003.jpg" alt="">
+                        <p class="a">Apollo Life Glucose-D Instant Energy Drink,.....</p>
+                        <h3>MRP RS.100</h3>
+                        <img src="https://newassets.apollo247.com/images/circle.png" alt="">
+                        <span class="a">₹ 10 extra cashback</span>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/pub/media/catalog/product/l/i/lim0003.jpg" alt="">
+                        <p class="a">Apollo Life Glucose-D Instant Energy Drink,.....</p>
+                        <h3>MRP RS.100</h3>
+                        <img src="https://newassets.apollo247.com/images/circle.png" alt="">
+                        <span class="a">₹ 10 extra cashback</span>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/pub/media/catalog/product/l/i/lim0003.jpg" alt="">
+                        <p class="a">Apollo Life Glucose-D Instant Energy Drink,.....</p>
+                        <h3>MRP RS.100</h3>
+                        <img src="https://newassets.apollo247.com/images/circle.png" alt="">
+                        <span class="a">₹ 10 extra cashback</span>
+                    </div>
+                    <div>
+                        <img src="https://newassets.apollo247.com/pub/media/catalog/product/l/i/lim0003.jpg" alt="">
+                        <p class="a">Apollo Life Glucose-D Instant Energy Drink,.....</p>
+                        <h3>MRP RS.100</h3>
+                        <img src="https://newassets.apollo247.com/images/circle.png" alt="">
+                        <span class="a">₹ 10 extra cashback</span>
+                    </div>
+                </div>
+            </div>
+            <div id="delivery">
+                <div>
+                    <h5>WHERE SHOULD WE DELIVER?</h5>
+                </div>
+                <div>
+                    <button id="address_btn">ADD DELIVERY ADDRESS</button>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="">View <img src="https://newassets.apollo247.com/images/circle.png" alt="">plans</label>
+                    <div>Selecting CIRCLE plans will remove any applied coupon. You can opt for coupon again later.
+                    </div>
+                </div>
+                <div class="border_bottom">
+                    <span>TOTAL CHARGES</span>
+                </div>
+                <div>
+                    <div>
+                        <label for="">Cart Total</label>
+                        <label id="cart_total" for=""></label>
+                    </div>
+                    <div class="border_bottom">
+                        <label for="">Delivery Charges</label>
+                        <label for=""><span>FREE ₹</span><span id="dc">25.00</span></label>
+                    </div>
+                    <div id="total">
+                        <label for="">TO PAY</label>
+                        <label id="payable_amount" for="">₹ 2483.00</label>
+                    </div>
+                </div>
+                <div>
+                    You will be receiving 1 delivery for this order.
+                </div>
+                <!-- <hr> -->
+            </div>
+
+        </div>
+    </div>
+    <div id="bottom">
+        <div>
+            <div>
+                <h4>ABOUT APOLLO PHARMACY</h4>
+                <div id="">
+                    <p>About US</p>
+                    <p>FAQs</p>
+                    <p>Find a Pharmacy</p>
+                    <p>Careers</p>
+                    <p>Contact US</p>
+                    <p>Blogs</p>
+                    <p>Health Queries</p>
+                    <p>Know Your Health Credits</p>
+                    <p>About One Apollo Program</p>
+                    <p>Compliance</p>
+                    <p>Terms and Condition</p>
+                    <p>Privacy Policy</p>
+                    <p>Returns and Refunds</p>
+                    <p>Medicine Delivery & Cancellation</p>
+                    <p>Online Doctors App</p>
+                    <p>Online Medicine App</p>
+                    <p>Apollo Circle Membership</p>
+                    <p>Pharmacy Sitemap</p>
+                </div>
+            </div>
+            <div>
+                <h4>SERVICES</h4>
+                <div class="popup">
+                    <p>Online Doctor Consultation</p>
+                    <p>Apollo Pro Health Program</p>
+                    <p>All Doctors List</p>
+                    <p>Consult Physicians</p>
+                    <p>Consult Dermatologists</p>
+                    <p>Consult Paediatricians</p>
+                    <p>Consult Gynaecologists</p>
+                    <p>Consult Gastroenterologists</p>
+                    <p>Consult Cardiologists</p>
+                    <p>Consult Dietitians</p>
+                    <p>Consult ENT Specialists</p>
+                    <p>Consult Geriatricians</p>
+                    <p>Consult Diabetologists</p>
+                </div>
+            </div>
+            <div>
+                <h4>BOOK LAB TESTS AT HOME</h4>
+                <div class="popup">
+                    <p>RT PCR Test At Home</p>
+                    <p>Book Lab Tests at Home</p>
+                    <p>Renal Profile (KFT, RFT Test)</p>
+                    <p>Hemogram Test</p>
+                    <p>Lipid Profile Test</p>
+                    <p>Thyroid Profile Test (T3 T4 Tsh Test)</p>
+                    <p>D Dimer Test</p>
+                    <p>Urine Culture Test</p>
+                    <p>Complete Blood Count (CBC Test)</p>
+                    <p>Widal Test</p>
+                    <p>Liver Function Test (LFT Test)</p>
+                </div>
+            </div>
+            <div>
+                <h4>PRODUCT CATEGORIES</h4>
+                <div class="popup">
+                    <p>View All Brands</p>
+                    <p>View All Salts</p>
+                    <p>Health Devices</p>
+                    <p>Personal Care</p>
+                    <p>Baby Care</p>
+                    <p>Nutrition</p>
+                    <p>Dolo 650</p>
+                    <p>Beauty Skin Care</p>
+                    <p>Immunity Boosters</p>
+                    <p>Covid Essentials</p>
+                    <p>Diabetes Care</p>
+                    <p>Patanjali Coronil Kit</p>
+                    <p>Mamaearth Products</p>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <div>
+            <div>
+                <img src="https://newassets.apollo247.com/images/apollopharmacy/logo.svg" alt="">
+            </div>
+            <div id="social-media">
+                <div><img src="https://www.iconpacks.net/icons/1/free-icon-facebook-logo-126.png" alt=""></div>
+                <div><img src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429.png" alt=""></div>
+                <div><img src="https://www.iconpacks.net/icons/1/free-icon-linkedin-130.png" alt=""></div>
+                <div><img src="https://www.iconpacks.net/icons/2/free-icon-youtube-logo-2431.png" alt=""></div>
+            </div>
+            <div id="play-store">
+                <img src="https://iconape.com/wp-content/png_logo_vector/get-it-on-google-play-2016-logo.png" alt="">
+                <img src="https://iconape.com/wp-content/png_logo_vector/available-on-the-app-store-badge-logo.png"
+                    alt="">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script src="cart.js"></script>
