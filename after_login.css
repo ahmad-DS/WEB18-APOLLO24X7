@@ -557,3 +557,35 @@ footer {
     line-height: 1.75rem;
   }
 }
+.popup{
+  width:300px;
+  height: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky;
+  left: 50%;
+  top: 25%;
+  transform: translate(50%,-50%) scale(0.1);
+  text-align: center;
+  visibility: hidden;
+  background-color: rgb(226, 238, 238);
+  width: 350px;
+  height: auto;
+}
+.visblecontent{
+  visibility: visible;
+  transform: translate(50%,-50%) scale(1);
+  transition: 0.4s;
+
+}
+.popup>button{
+  position: fixed;
+  left: 85%;
+  top: 1%;
+  width: 40px;
+  height: 40px;
+  font-size: 35px;
+  border-radius: 50%;
+  color: black;
+  background-color: red;
+
+}
