@@ -6,7 +6,9 @@
 //         list2[i].style.display="block"
 //     })
 // }
-var cartItems=[
+// 
+// var cartItems=JSON.parse(localStorage.getItem("addtocart"))||[];
+var cartItems = [
     {
         "id": 4791,
         "sku": "SEB0020",
@@ -78,7 +80,7 @@ var cartItems=[
         "dc_availability": "Yes",
         "is_express": "No",
         "is_in_contract": "Yes",
-        "quantity": 2,
+        "quantity": 1,
         "isShippable": true,
         "sellingPrice": 530
     },
@@ -108,73 +110,164 @@ var cartItems=[
         "sellingPrice": 668.5
     }
 ]
-
+// var selected = 1;
 displayData(cartItems);
 
-function displayData(data){
-    data.forEach(function(element){
-        var card=document.createElement("div");
-        card.setAttribute("class","card");
+function displayData(data) {
+    document.querySelector("#added_items").innerHTML = "";
+    document.querySelector("#total_items").innerText=data.length;
+    data.forEach(function (element,index) {
+        var card = document.createElement("div");
+        card.setAttribute("class", "card");
 
-        var left=document.createElement("div");
-        var leftdiv1=document.createElement("div");
-        var thumbnail=document.createElement("img");
-        thumbnail.setAttribute("src","https://newassets.apollo247.com/pub/media"+element.small_image);
-        thumbnail.style.width="50px";
-        thumbnail.style.height="50px";
+        var left = document.createElement("div");
+        left.style.display = "flex";
 
-        console.log(thumbnail);
+        var leftdiv1 = document.createElement("div");
+        var thumbnail = document.createElement("img");
+       
+        thumbnail.setAttribute("src", "https://newassets.apollo247.com/pub/media" + element.small_image);
+        thumbnail.style.width = "50px";
+        thumbnail.style.height = "50px";
+        // console.log(thumbnail);
         leftdiv1.append(thumbnail);
 
 
 
-        var leftdiv2=document.createElement("div");
-        var h4=document.createElement("h4");
-        h4.innerText=element.name;
-        var p1=document.createElement("p");
-        p1.innerText="(pack of "+element.quantity+")"
+        var leftdiv2 = document.createElement("div");
+        var h4 = document.createElement("h4");
+        h4.innerText = element.name;
+        var p1 = document.createElement("p");
+        p1.innerText = "(quantity added " + element.quantity + ")"
 
-        var p2=document.createElement("p");
-        p2.innerText="QTY: ";
-        leftdiv2.append(h4,p1,p2);
-        left.append(leftdiv1,leftdiv2)
 
-        var right=document.createElement("div");
-        var del=document.createElement("img");
-        del.setAttribute("src","https://newassets.apollo247.com/images/ic_delete.svg");
-        var p3=document.createElement("p");
-        var n=((+element.price-element.sellingPrice)*100/+element.price).toFixed(2);
-        p3.innerText=n+"% off "+" ₹ "+element.price;
-        var h3=document.createElement("h3");
-        h3.innerText=element.sellingPrice;
-        var p4=document.createElement("p");
-        p4.innerText="savings ₹"+ (+element.price-element.sellingPrice);
-        right.append(del,p3,h3,p4)
+        var inner_div = document.createElement("div");
+        inner_div.style.border = "1px solid green"
+        inner_div.style.display = "inline";
+        inner_div.innerText = "QTY: ";
+        // creating select tag for changing quantity of an item
+        var select = document.createElement("SELECT");
+
+        // adding event listener to select tag to change no of quantity of a product
+
+
+
+        var shakil=document.createElement("option");
+        shakil.value="";
+        shakil.innerText="choose quantity";
+        select.add(shakil)
+        select.style.border = "0px"
+        for (var i = 1; i <= 10; i++) {
+            var opt = document.createElement("option");
+            opt.value = i;
+            opt.innerText = i;
+            // if (selected == i) {
+            //     opt.setAttribute("selected", "true")
+            // }
+            select.add(opt);
+        }
+        inner_div.append(select);
+
+        leftdiv2.append(h4, p1, inner_div);
+        left.append(leftdiv1, leftdiv2)
+
+        var right = document.createElement("div");
+        var del = document.createElement("img");
+        del.addEventListener("click",function(){
+            
+            cartItems.splice(index,1);
+            displayData(cartItems);
+            // localStorage.set
+        })
+        del.setAttribute("class","delete")
+        del.setAttribute("src", "https://newassets.apollo247.com/images/ic_delete.svg");
+        var p3 = document.createElement("p");
+        var n = ((+element.price - element.sellingPrice) * 100 / +element.price).toFixed(2);
+        var span1 = document.createElement("span");
+        span1.innerText = n + "% off ";
+        span1.style.color = '#00B38E';
+        span1.style.marginRight = "5px";
+        var span2 = document.createElement("span");
+        span2.setAttribute("class", "oldPrice")
+        // ***
+        span2.innerText = " ₹ " + (element.price * element.quantity).toFixed(2);
+        span2.style.textDecoration = "line-through";
+
+        p3.append(span1, span2);
+        var h3 = document.createElement("h3");
+        h3.setAttribute('class', 'currentPrice')
+        h3.style.color = "#01475b"
+        // ***
+        h3.innerText = "₹" + (element.sellingPrice * element.quantity).toFixed(2);
+        var p4 = document.createElement("p");
+        // ****
+        p4.innerText = "savings ₹" + ((+element.price - element.sellingPrice) * element.quantity).toFixed(2);
+        right.append(del, p3, h3, p4)
         // var numItems=document.createElement("select");
         // var option1=document.createElement("select");
+        select.addEventListener("change", function () {
+            console.log(h3);
+            h3.innerText = "Shakil";
+            changeQuantity(element)
+        });
 
-
-        card.append(left,right);
-        console.log(card)
+        card.append(left, right);
+        // console.log(card)
         document.querySelector("#added_items").append(card)
 
     })
 }
+// finding indivisual product total cost
+// function products
 
 // finding total savings
+totalSavings();
+function totalSavings(){
+var savings = cartItems.reduce(function (sum, element) {
+    return sum + (+element.price - element.sellingPrice) * element.quantity;
+}, 0);
+console.log(savings);
 
-
-    var savings=cartItems.reduce(function(sum,element){
-        return sum+(+element.price-element.sellingPrice)
-    },0);
-    console.log(savings);
-
-    document.getElementById("saving_amount").innerText="₹"+savings;
-     
+document.getElementById("saving_amount").innerText = "₹" + savings.toFixed(2);
+}
 // finding total payable amount
-var total_amount=cartItems.reduce(function(sum,element){
-    return sum+(+element.sellingPrice)
-},0);
+totalAmount();
+function totalAmount(){
+var total_amount = cartItems.reduce(function (sum, element) {
+    return sum + (+element.sellingPrice)*element.quantity
+}, 0);
 console.log(total_amount);
 
-document.getElementById("cart_total").innerText="₹"+total_amount;
+document.getElementById("cart_total").innerText = "₹" + total_amount.toFixed(2);
+}
+
+// calculating payable Amount
+payableAmount()
+function payableAmount(){
+    var dc=document.querySelector("#dc").innerText;
+    var total_amount = cartItems.reduce(function (sum, element) {
+        return sum + (+element.sellingPrice)*element.quantity
+    }, 0);
+    console.log(typeof(dc),typeof(total_amount))
+    var toPay=total_amount-dc;
+    document.querySelector("#payable_amount").innerText="₹"+toPay;
+
+}
+
+
+
+function changeQuantity(element) {
+
+    var qty = event.target.value;
+
+    console.log(element)
+    element.quantity = qty;
+
+    selected = qty
+    displayData(cartItems);
+    totalSavings();
+    totalAmount();
+    payableAmount()
+    
+
+}

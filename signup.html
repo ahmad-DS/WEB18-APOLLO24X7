@@ -102,6 +102,9 @@ Welcome to apollo 24|7
 </html>
 <script>
     var signupdetailarr=JSON.parse(localStorage.getItem("signupdetaildata"))||[]
+    var mobilenumberdata =JSON.parse(localStorage.getItem("otpdata"))
+    var mobilenumber =mobilenumberdata[0].mobilenumber
+    
     function checkboxfunction(){
         if(form.firstname.value!="" &&form.lastname.value!=""&&form.dob.value!=""&&form.gender.value!="" ){
             var summit =document.getElementById("summit")
@@ -113,7 +116,8 @@ Welcome to apollo 24|7
                   firstname:form.firstname.value,
                   lastname:form.lastname.value,
                   age: form.dob.value,
-                  gender:form.gender.value
+                  gender:form.gender.value,
+                  number:mobilenumber
                }
                signupdetailarr.push(obj)
                localStorage.setItem("signupdetaildata",JSON.stringify(signupdetailarr))
@@ -126,5 +130,6 @@ Welcome to apollo 24|7
             alert("Please fill all requirement")
         }
     }
+    
     
 </script>
