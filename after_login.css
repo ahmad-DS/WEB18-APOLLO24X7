@@ -509,10 +509,12 @@ footer {
     justify-content: start;
   }
   .covid19box {
-    border: 2px solid greenyellow;
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: repeat(2, auto);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .covid_query {
+    padding: 10px;
+    width: 35%;
   }
   .hiddenPart {
     display: block;
@@ -555,5 +557,19 @@ footer {
   .list_flex > li > a {
     color: #ffae45;
     line-height: 1.75rem;
+  }
+}
+@media all and (max-width: 550px) {
+  .radio_button {
+    display: none;
+  }
+  .covid19box {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .covid_query {
+    padding: 10px;
+    width: 90%;
+    margin: 10px auto;
   }
 }

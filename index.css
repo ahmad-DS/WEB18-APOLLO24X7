@@ -223,13 +223,17 @@ nav {
   right: 20px;
 }
 .radio_button {
-  padding: 15px 0px 15px 70px;
+  /* padding: 15px 0px 15px 00px; */
+  margin: 0 auto;
+  /* border: 2px solid red; */
+  width: fit-content;
 }
 .radio {
   border-radius: 50%;
   background-color: grey;
   border: 1px solid rgba(0, 0, 0, 0.501);
   margin-left: 10px;
+
   padding: 1px 11px;
 }
 .radio:hover {
@@ -257,12 +261,14 @@ nav {
 .covid19box {
   /* border: 1px solid black; */
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .covid_query {
   /* border: 1px solid green; */
-  width: 22%;
+  width: 24%;
+  height: auto;
   padding: 10px 30px;
+  margin-right: 20px;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -274,7 +280,7 @@ nav {
 }
 .covid_query > p {
   color: #fc9916;
-  font-size: 13px;
+  font-size: 12px;
 }
 /* -------  pro Apollo poster  -------- */
 .pro_apollo_poster {
@@ -539,10 +545,12 @@ footer {
     justify-content: start;
   }
   .covid19box {
-    border: 2px solid greenyellow;
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: repeat(2, auto);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .covid_query {
+    padding: 10px;
+    width: 35%;
   }
   .hiddenPart {
     display: block;
@@ -585,5 +593,19 @@ footer {
   .list_flex > li > a {
     color: #ffae45;
     line-height: 1.75rem;
+  }
+}
+@media all and (max-width: 550px) {
+  .radio_button {
+    display: none;
+  }
+  .covid19box {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .covid_query {
+    padding: 10px;
+    width: 90%;
+    margin: 10px auto;
   }
 }
