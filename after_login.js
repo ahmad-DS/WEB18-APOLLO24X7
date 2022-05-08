@@ -34,11 +34,23 @@ function showImage(n){
     images[n-1].style.display ="block";
 }
 // =====taking name via prompt function===== //
-var name = prompt("what is your name");
-if (name == "") {
-  name = "There";
-}
-document.querySelector(".heading>h1").innerText = "Hello " + name +"!";
+// var name = prompt("what is your name");
+// if (name == "") {
+//   name = "There";
+// }
+
 // name.style.borderBottomWidth = "2px";
 // name.style.borderBottomColor = "green";
 // name.style.borderBottomStyle = "solid";
+var signupdetailarr = JSON.parse(localStorage.getItem("signupdetaildata"))
+var lastotp =JSON.parse(localStorage.getItem("lastotp"))
+console.log(lastotp)
+var firstname = lasname(signupdetailarr)
+function lasname(signupdetailarr){
+    signupdetailarr.forEach(function(el){
+        if(el.otp ==lastotp){
+            document.getElementById("displayname").innerText="Hello " + el.firstname +"!"
+        }
+    })
+}
+
