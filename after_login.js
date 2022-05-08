@@ -66,3 +66,6 @@ function showpop(){
 function closearr(){
     document.querySelector(".popup").classList.remove("visblecontent")
   }
+  function mianpage(){
+      window.location.href="index.html"
+  }
