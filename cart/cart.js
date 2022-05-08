@@ -188,7 +188,7 @@ document.querySelector(".logo").addEventListener("click",function(){
 
 // adding event lstener to go to payment button;
 document.querySelector("#address_btn").addEventListener("click",function(){
-    window.location.href="../payment.html"
+    window.location.href="../SHIVANI-THAKUR/payment.html"
 })
 
 
