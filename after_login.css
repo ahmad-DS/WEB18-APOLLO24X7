@@ -566,7 +566,7 @@ footer {
   position: fixed;
   left: 51.5%;
   /* right: 0; */
-  top: 22%;
+  top: 26%;
   transform: translate(50%,-50%) scale(0.1);
   text-align: center;
   visibility: hidden;

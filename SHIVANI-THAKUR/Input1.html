@@ -68,20 +68,30 @@
     <div class="main">
       <div class="f1"><h2>DETAILS</h2></div>
 
-      <div class="f2"><input type="text" placeholder="CARD NUMBER" /></div>
+      <div class="f2 a"><input  type="text" placeholder="CARD NUMBER" /></div>
 
-      <div class="f2"><input type="text" placeholder="FULL NAME" /></div>
+      <div class="f2 b"><input type="text" placeholder="FULL NAME" /></div>
 
-      <div class="f2"><input type="text" placeholder="VALID TILL" /></div>
-      <div class="f2"><input type="text" placeholder="PIN" /></div>
-      <div class="f3" onclick="proceed()"><h2>PROCEED</h2></div>
+      <div class="f2 c"><input type="text" placeholder="VALID TILL" /></div>
+      <div class="f2 d"><input type="text" placeholder="PIN" /></div>
+      <div class="f3 " onclick="proceed()"><h2>PROCEED</h2></div>
     </div>
   </body>
 </html>
 
 <script>
   function proceed() {
+    var card=document.querySelector(".a>input").value;
+    var name=document.querySelector(".b>input").value;
+    var valid=document.querySelector(".c>input").value;
+    var pin=document.querySelector(".d>input").value;
+    if(card=="" || name=="" || valid=="" || pin==""){
+      alert("fill full credential");
+    
+    }
+    else{
     alert("payment Successful!");
     window.location.href = "payment.html";
+    }
   }
 </script>

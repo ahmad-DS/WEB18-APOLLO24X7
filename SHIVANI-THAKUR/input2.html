@@ -68,12 +68,12 @@
     <div class="main">
         <div class="f1"><h2>DETAILS </h2></div>
        
-        <div class="f2"><input type="text" placeholder="BANK NAME"></div>
+        <div class="f2 a"><input type="text" placeholder="BANK NAME"></div>
        
         
-        <div class="f2"><input type="text" placeholder="UPI ID"></div>
+        <div class="f2 b"><input type="text" placeholder="UPI ID"></div>
        
-        <div class="f2"><input type="text" placeholder="PASSWORD"></div>
+        <div class="f2 c"><input type="text" placeholder="PASSWORD"></div>
         
         <div class="f3"><h2 onClick="proceed()"> PAY</h2></div>
 
@@ -82,7 +82,17 @@
 </html>
 <script>
      function proceed() {
+        var card=document.querySelector(".a>input").value;
+    var name=document.querySelector(".b>input").value;
+    var valid=document.querySelector(".c>input").value;
+   
+    if(card=="" || name=="" || valid=="" ){
+      alert("fill full credential");
+    
+    }
+    else{
     alert("payment Successful!");
     window.location.href = "payment.html";
+    }
   }
 </script>
