@@ -104,6 +104,7 @@ Welcome to apollo 24|7
     var signupdetailarr=JSON.parse(localStorage.getItem("signupdetaildata"))||[]
     var mobilenumberdata =JSON.parse(localStorage.getItem("otpdata"))
     var mobilenumber =mobilenumberdata[0].mobilenumber
+    var password =mobilenumberdata[0].otp
     
     function checkboxfunction(){
         if(form.firstname.value!="" &&form.lastname.value!=""&&form.dob.value!=""&&form.gender.value!="" ){
@@ -117,10 +118,16 @@ Welcome to apollo 24|7
                   lastname:form.lastname.value,
                   age: form.dob.value,
                   gender:form.gender.value,
-                  number:mobilenumber
+                  number:mobilenumber,
+                  otp:password
                }
                signupdetailarr.push(obj)
+<<<<<<< HEAD
+               localStorage.setItem("signupdetaildata",JSON.stringify(signupdetailarr));
+=======
                localStorage.setItem("signupdetaildata",JSON.stringify(signupdetailarr))
+>>>>>>> 03e98bf9452bfbd38421062d36f6f37b96ca2be2
+               window.location.href="after_login.html"
                
             })
                
@@ -130,6 +137,6 @@ Welcome to apollo 24|7
             alert("Please fill all requirement")
         }
     }
-    
+     
     
 </script>

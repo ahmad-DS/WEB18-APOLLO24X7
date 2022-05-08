@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="cart.css">
     <title>Cart</title>
 
@@ -20,7 +22,12 @@
             width: 85%;
             height: auto;
             margin: auto;
+            padding-top: 30px;
             padding-bottom: 100px;
+        }
+
+        #top>h4 {
+            margin-left: 1.5%;
         }
 
         #main {
@@ -145,17 +152,67 @@
             margin: 15px 0 20px 0;
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            /* text-decoration: underline green dashed 1px; */
         }
-
-
-
-        /* hr{
-            border:1px solid grey;
-        } */
     </style>
 </head>
 
 <body>
+    
+    <nav>
+        <div class="logo">
+            <img src="https://newassets.apollo247.com/images/ic_logo.png" alt="logo" />
+        </div>
+        <div class="content">
+            <div class="text">
+                <a href="../doctors/doctors.html">
+                    <p class="first">DOCTOR</p>
+                </a>
+                <a href="#">
+                    <p class="second">Consult Online</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="../SAMRAT-APPOLLO_24X7/Samrat_product.html">
+                    <p class="first">PHARMACY</p>
+                </a>
+                <a href="###">
+                    <p class="second">Medicines & other products</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="#">
+                    <p class="first">LAB TEST</p>
+                </a>
+                <a href="#">
+                    <p class="second">Health check-ups</p>
+                </a>
+            </div>
+            <div class="text">
+                <a href="#">
+                    <p class="first">COVID_19</p>
+                </a>
+                <a href="#">
+                    <p class="second">Latest updates</p>
+                </a>
+            </div>
+            <div class="cart_logo">
+                <a href="#"><span class="material-symbols-outlined">
+                    shopping_cart
+                    </span></a>
+                <div id="cart_logo_top"></div>
+
+            </div>
+            <div class="user_logo">
+                <a href="getotp.html"><span class="material-symbols-outlined">
+                    account_circle
+                    </span></a>
+
+            </div>
+        </div>
+    </nav>
+  
+
     <div id="top">
         <h4>MY CART</h4>
         <div id="main">
@@ -163,7 +220,7 @@
             <div id="items">
 
                 <div>
-                    <h4>ITEMS IN YOUR CART 03</h4>
+                    <h4>ITEM(S) IN YOUR CART (<span id="total_items"></span>)</h4>
                     <h4>ADD ITEMS</h4>
                 </div>
                 <!-- <hr> -->
@@ -283,7 +340,7 @@
                     <h5>WHERE SHOULD WE DELIVER?</h5>
                 </div>
                 <div>
-                    <button id="address_btn">ADD DELIVERY ADDRESS</button>
+                    <button id="address_btn">GO TO PAYMENT</button>
                 </div>
                 <div>
                     <input type="checkbox">
@@ -299,13 +356,13 @@
                         <label for="">Cart Total</label>
                         <label id="cart_total" for=""></label>
                     </div>
-                    <div id="border_bottom">
+                    <div class="border_bottom">
                         <label for="">Delivery Charges</label>
-                        <label for=""><span>FREE</span><span>₹ 25.00</span></label>
+                        <label for=""><span>FREE ₹</span><span id="dc">25.00</span></label>
                     </div>
                     <div id="total">
                         <label for="">TO PAY</label>
-                        <label for="">₹ 2483.00</label>
+                        <label id="payable_amount" for="">₹ 2483.00</label>
                     </div>
                 </div>
                 <div>
@@ -394,10 +451,10 @@
                 </div>
             </div>
 
-            
-            
-            
-            
+
+
+
+
 
         </div>
         <div>
@@ -412,10 +469,11 @@
             </div>
             <div id="play-store">
                 <img src="https://iconape.com/wp-content/png_logo_vector/get-it-on-google-play-2016-logo.png" alt="">
-                <img src="https://iconape.com/wp-content/png_logo_vector/available-on-the-app-store-badge-logo.png" alt="">
+                <img src="https://iconape.com/wp-content/png_logo_vector/available-on-the-app-store-badge-logo.png"
+                    alt="">
             </div>
         </div>
-        
+
     </div>
 
 </body>

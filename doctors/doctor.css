@@ -1,9 +1,11 @@
+/* Bosy Section Start Here */
+
 #container {
     font-family: "Poppins", sans-serif;
     border: 1px solid red;
     height: auto;
-    width: 80%;
-    margin: 0 10% 0 10%;
+    width: 1100px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
   }
@@ -11,7 +13,16 @@
     border: 1px solid green;
     width: 60%;
   }
-
+  a{
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+  }
+  a:hover{
+    transform: translate(0, -10px);
+  }
   .box1 {
     height: auto;
     width: auto;
@@ -29,6 +40,8 @@
 
   input {
     border: none;
+    width: 90%;
+    height: 20px;
   }
 
   .box1 > h1 {
@@ -78,7 +91,7 @@
   .specialities {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, auto);
+    /* grid-template-rows: repeat(1, auto); */
     gap: 20px;
     margin: auto;
     width: 98%;
@@ -179,16 +192,20 @@
   .otherSpecialities > .common {
     height: 110px;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     display: flex;
     border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
   }
-
+  .otherSpecialities>.common:hover{
+    transform: translate(0, -10px);
+  }
   .newImg {
     height: 100%;
     width: 20%;
     padding-right: 20px;
-    /* border: 1px solid red; */
   }
 
   .common > div > img {
@@ -249,7 +266,6 @@
   .block {
     height: 1000px;
     width: 100%;
-    /* border: 1px solid yellow; */
   }
   .online {
     display: none;
@@ -263,7 +279,6 @@
     border: 1px solid black;
     display: flex;
     margin-top: 20px;
-    /* display: none; */
   }
   .person {
     height: 100px;
@@ -271,7 +286,6 @@
     border: 1px solid black;
     display: flex;
     margin-top: 20px;
-    /* display: none; */
   }
 
   .ul > li {
@@ -305,9 +319,10 @@
     font-family: "Poppins", sans-serif;
     border: 1px solid red;
     height: auto;
-    width: 76%;
-    margin: 25px 10% 0 10%;
-    padding: 0 2% 0 2%;
+    width: 1075px;
+    margin: auto;
+    padding-top: 30px;
+    padding-left: 25px;
   }
   .blog > p {
     color: #02475b;
@@ -316,6 +331,7 @@
     color: #02475b;
   }
   .summary {
+    margin-left: -25px;
     padding: 10px 25px 20px 25px;
     border: 1px solid darkblue;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -330,24 +346,13 @@
   details {
     border-bottom: 0.1px solid rgb(125, 214, 214);
     margin-bottom: 10px;
-    /* font-weight: 100; */
   }
-  /* details > summary::after {
-    transition: transform 0.3s ease;
-  } */
-  /* details[open] > summary > .fa-rotate-180::after {
-    transform: rotate(180deg);
-  } */
-  /* .rotate {
-    transform: rotate(180deg);
-  } */
   details > summary::after {
     content: ">";
     font-size: 20px;
     transition: transform 0.3s ease;
   }
   details[open] > summary::after {
-    /* content: attr(".rotate"); */
     transform: rotate(90deg);
   }
   strong {
@@ -356,20 +361,108 @@
   summary + p {
     color: #02475b;
   }
-  /* Button Section */
-  /* .btn1:link {
-    color: teal;
-    background-color: black;
-  }
-  .btn1:hover {
-    background-color: green;
-  }
-  .btn1:active,
-  .btn1:visited {
-    background-color: black;
-  } */
   .btn1:focus,
   .btn2:focus {
     background-color: black;
     color: azure;
+  }
+
+  /*   Footer Section Starts here   */
+  footer {
+    background-color: #020d11;
+    padding: 30px 60px 70px;
+    margin-left: -25px;
+  }
+  .foot_logo {
+    text-align: center;
+  }
+  .foot_logo > a > img {
+    width: 105px;
+  }
+  .fList {
+    margin-bottom: 30px;
+  }
+  .fList > h3 {
+    font-size: 15px;
+    color: #ffae45;
+    margin-bottom: 30px;
+  }
+  .fList > h3 > span {
+    display: none;
+  }
+  .list_flex {
+    display: flex;
+    gap: 12px 25px;
+    flex-wrap: wrap;
+  }
+  .list_flex > li {
+    font-size: 18px;
+    color: white;
+    background-color: none;
+    margin-left: 10px;
+  }
+  .list_flex > li > a {
+    font-size: 15px;
+    color: white;
+    background-color: #020d11;
+    text-decoration: none;
+  }
+
+  /*   NavBar Section Starts Here   */
+
+  nav {
+    position: sticky;
+    top: 0;
+    width: 1100px;
+    margin: auto;
+  
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .logo > img {
+    width: 170px;
+    height: 80px;
+    padding: 12px 35px;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content > .text1 {
+    margin-right: 20px;
+    width: 13%;
+    line-height: 13px;
+    padding-top: 15px;
+  }
+  .text1 > a {
+    text-decoration: none;
+  }
+  .first {
+    color: #02475b;
+    font-size: 13px;
+    font-weight: 800;
+    border-bottom: teal 1px solid;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .second {
+    color: #02475b;
+    font-size: 12px;
+  }
+  .cart_logo {
+    margin-right: 20px;
+    padding-top: 25px;
+  }
+  .cart_logo > a > img {
+    width: 25px;
+  }
+  .user_logo {
+    margin-right: 20px;
+    padding-top: 10px;
+  }
+  .user_logo > a > img {
+    width: 60px;
   }

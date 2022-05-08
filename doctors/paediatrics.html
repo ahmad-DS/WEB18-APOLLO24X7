@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paediatrics</title>
+    <style>
+      .mainBox {
+        height: 300px;
+        width: auto;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .subBox1 {
+        height: 30%;
+        width: 95%;
+        margin: 10px;
+        display: flex;
+      }
+      .subBox2 {
+        height: 100%;
+        width: 25%;
+      }
+      .subBox2 > img {
+        height: 100%;
+        width: 100%;
+      }
+      .subBox3 {
+        height: 90%;
+        width: 75%;
+        padding-left: 10px;
+      }
+      .subBox3 > p {
+        margin: 5px;
+      }
+      .subBox5 {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+      }
+      .subBox4 {
+        height: auto;
+        width: 50%;
+        margin-left: 10px;
+      }
+      .subBox6 {
+        margin: 10px;
+        display: flex;
+        height: auto;
+      }
+      .subBox6 > img {
+        margin-top: -15px;
+      }
+      img + p {
+        margin: 20px;
+        margin-top: 15px;
+      }
+      .paediatrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+      strong {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paediatrics"></div>
+  </body>
+</html>
+
+<script>
+  var paediatrics = JSON.parse(localStorage.getItem("Paediatrics"));
+  paediatrics.forEach(function (el) {
+    var mainBox = document.createElement("div"); // done
+    mainBox.className = "mainBox";
+    var subBox1 = document.createElement("div"); // done
+    subBox1.className = "subBox1";
+    var subBox2 = document.createElement("div"); // done
+    subBox2.className = "subBox2";
+    var doctorImg = document.createElement("img"); // done
+    doctorImg.src = el.doctorImg;
+    var subBox3 = document.createElement("div"); // done
+    subBox3.className = "subBox3";
+    var name = document.createElement("h4"); // done
+    name.innerText = el.name;
+    var specialist = document.createElement("h4"); // done
+    specialist.innerText = el.specialist;
+    var exp = document.createElement("p"); // done
+    exp.innerText = el.exp;
+    var qualification = document.createElement("p"); // done
+    qualification.innerText = el.qualification;
+    var subBox5 = document.createElement("div"); // done
+    subBox5.className = "subBox5";
+    var subBox4 = document.createElement("div"); // done
+    subBox4.className = "subBox4";
+    var price = document.createElement("strong"); // done
+    price.innerText = el.price;
+    var subBox6 = document.createElement("div"); // done
+    subBox6.className = "subBox6";
+    var languageLogo = document.createElement("img"); // done
+    languageLogo.src = el.languageLogo;
+    var language = document.createElement("p"); // done
+    language.innerText = el.language;
+    var subBox7 = document.createElement("div");
+    subBox7.id = "box"; // done
+    subBox7.className = "subBox6";
+    var locationLogo = document.createElement("img");
+    locationLogo.src = el.locationLogo;
+    var location = document.createElement("p");
+    location.innerText = el.location;
+
+    subBox5.append(subBox4);
+    subBox1.append(subBox2, subBox3);
+    subBox3.append(name, specialist, exp, qualification);
+    subBox2.append(doctorImg);
+    subBox6.append(languageLogo, language);
+    subBox4.append(price);
+    mainBox.append(subBox1, subBox5, subBox6, subBox7);
+    subBox7.append(locationLogo, location);
+
+    document.querySelector(".paediatrics").append(mainBox);
+  });
+</script>
